@@ -44,6 +44,35 @@ Blockly.Blocks['declare_var_bool'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip(Blockly.Msg.ARD_AS_BOOL_NUMBER_TIP);
+  },
+  /**
+   * Return all variables referenced by this block.
+   * @return {!Array.<string>} List of variable names.
+   * @this Blockly.Block
+   */
+  getVars: function() {
+    return [this.getFieldValue('NAME')];
+  },
+  /**
+   * Notification that a variable is renaming.
+   * If the name matches one of this block's variables, rename it.
+   * @param {string} oldName Previous name of variable.
+   * @param {string} newName Renamed variable.
+   * @this Blockly.Block
+   */
+  renameVar: function(oldName, newName) {
+    if (Blockly.Names.equals(oldName, this.getFieldValue('NAME'))) {
+      this.setFieldValue(newName, 'NAME');
+    }
+  },
+  /**
+   * Gets the variable type selected in the drop down, always an integer.
+   * @param {!string} varName Name of the variable selected in this block to
+   *     check.
+   * @return {string} String to indicate the variable type.
+   */
+  getVarType: function(varName) {
+    return Blockly.Types.BOOLEAN;
   }
 };
 
@@ -60,6 +89,35 @@ Blockly.Blocks['declare_var_int'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip(Blockly.Msg.ARD_AS_INTEGER_NUMBER_TIP);
+  },
+  /**
+   * Return all variables referenced by this block.
+   * @return {!Array.<string>} List of variable names.
+   * @this Blockly.Block
+   */
+  getVars: function() {
+    return [this.getFieldValue('NAME')];
+  },
+  /**
+   * Notification that a variable is renaming.
+   * If the name matches one of this block's variables, rename it.
+   * @param {string} oldName Previous name of variable.
+   * @param {string} newName Renamed variable.
+   * @this Blockly.Block
+   */
+  renameVar: function(oldName, newName) {
+    if (Blockly.Names.equals(oldName, this.getFieldValue('NAME'))) {
+      this.setFieldValue(newName, 'NAME');
+    }
+  },
+  /**
+   * Gets the variable type selected in the drop down, always an integer.
+   * @param {!string} varName Name of the variable selected in this block to
+   *     check.
+   * @return {string} String to indicate the variable type.
+   */
+  getVarType: function(varName) {
+    return Blockly.Types.NUMBER;
   }
 };
 
@@ -76,6 +134,35 @@ Blockly.Blocks['declare_var_float'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip(Blockly.Msg.ARD_AS_FLOAT_NUMBER_TIP);
+  },
+  /**
+   * Return all variables referenced by this block.
+   * @return {!Array.<string>} List of variable names.
+   * @this Blockly.Block
+   */
+  getVars: function() {
+    return [this.getFieldValue('NAME')];
+  },
+  /**
+   * Notification that a variable is renaming.
+   * If the name matches one of this block's variables, rename it.
+   * @param {string} oldName Previous name of variable.
+   * @param {string} newName Renamed variable.
+   * @this Blockly.Block
+   */
+  renameVar: function(oldName, newName) {
+    if (Blockly.Names.equals(oldName, this.getFieldValue('NAME'))) {
+      this.setFieldValue(newName, 'NAME');
+    }
+  },
+  /**
+   * Gets the variable type selected in the drop down, always an integer.
+   * @param {!string} varName Name of the variable selected in this block to
+   *     check.
+   * @return {string} String to indicate the variable type.
+   */
+  getVarType: function(varName) {
+    return Blockly.Types.DECIMAL;
   }
 };
 
@@ -92,6 +179,35 @@ Blockly.Blocks['declare_var_long'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip(Blockly.Msg.ARD_AS_LONG_NUMBER_TIP);
+  },
+  /**
+   * Return all variables referenced by this block.
+   * @return {!Array.<string>} List of variable names.
+   * @this Blockly.Block
+   */
+  getVars: function() {
+    return [this.getFieldValue('NAME')];
+  },
+  /**
+   * Notification that a variable is renaming.
+   * If the name matches one of this block's variables, rename it.
+   * @param {string} oldName Previous name of variable.
+   * @param {string} newName Renamed variable.
+   * @this Blockly.Block
+   */
+  renameVar: function(oldName, newName) {
+    if (Blockly.Names.equals(oldName, this.getFieldValue('NAME'))) {
+      this.setFieldValue(newName, 'NAME');
+    }
+  },
+  /**
+   * Gets the variable type selected in the drop down, always an integer.
+   * @param {!string} varName Name of the variable selected in this block to
+   *     check.
+   * @return {string} String to indicate the variable type.
+   */
+  getVarType: function(varName) {
+    return Blockly.Types.NUMBER;
   }
 };
 
@@ -108,6 +224,35 @@ Blockly.Blocks['declare_var_uint'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip(Blockly.Msg.ARD_AS_UINT_NUMBER_TIP);
+  },
+  /**
+   * Return all variables referenced by this block.
+   * @return {!Array.<string>} List of variable names.
+   * @this Blockly.Block
+   */
+  getVars: function() {
+    return [this.getFieldValue('NAME')];
+  },
+  /**
+   * Notification that a variable is renaming.
+   * If the name matches one of this block's variables, rename it.
+   * @param {string} oldName Previous name of variable.
+   * @param {string} newName Renamed variable.
+   * @this Blockly.Block
+   */
+  renameVar: function(oldName, newName) {
+    if (Blockly.Names.equals(oldName, this.getFieldValue('NAME'))) {
+      this.setFieldValue(newName, 'NAME');
+    }
+  },
+  /**
+   * Gets the variable type selected in the drop down, always an integer.
+   * @param {!string} varName Name of the variable selected in this block to
+   *     check.
+   * @return {string} String to indicate the variable type.
+   */
+  getVarType: function(varName) {
+    return Blockly.Types.NUMBER;
   }
 };
 
@@ -124,6 +269,35 @@ Blockly.Blocks['declare_var_ulong'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip(Blockly.Msg.ARD_AS_ULONG_NUMBER_TIP);
+  },
+  /**
+   * Return all variables referenced by this block.
+   * @return {!Array.<string>} List of variable names.
+   * @this Blockly.Block
+   */
+  getVars: function() {
+    return [this.getFieldValue('NAME')];
+  },
+  /**
+   * Notification that a variable is renaming.
+   * If the name matches one of this block's variables, rename it.
+   * @param {string} oldName Previous name of variable.
+   * @param {string} newName Renamed variable.
+   * @this Blockly.Block
+   */
+  renameVar: function(oldName, newName) {
+    if (Blockly.Names.equals(oldName, this.getFieldValue('NAME'))) {
+      this.setFieldValue(newName, 'NAME');
+    }
+  },
+  /**
+   * Gets the variable type selected in the drop down, always an integer.
+   * @param {!string} varName Name of the variable selected in this block to
+   *     check.
+   * @return {string} String to indicate the variable type.
+   */
+  getVarType: function(varName) {
+    return Blockly.Types.NUMBER;
   }
 };
 
@@ -141,6 +315,35 @@ Blockly.Blocks['declare_var_digin'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip(Blockly.Msg.ARD_AS_DIGINPUT_PIN_TIP);
+  },
+  /**
+   * Return all variables referenced by this block.
+   * @return {!Array.<string>} List of variable names.
+   * @this Blockly.Block
+   */
+  getVars: function() {
+    return [this.getFieldValue('NAME')];
+  },
+  /**
+   * Notification that a variable is renaming.
+   * If the name matches one of this block's variables, rename it.
+   * @param {string} oldName Previous name of variable.
+   * @param {string} newName Renamed variable.
+   * @this Blockly.Block
+   */
+  renameVar: function(oldName, newName) {
+    if (Blockly.Names.equals(oldName, this.getFieldValue('NAME'))) {
+      this.setFieldValue(newName, 'NAME');
+    }
+  },
+  /**
+   * Gets the variable type selected in the drop down, always an integer.
+   * @param {!string} varName Name of the variable selected in this block to
+   *     check.
+   * @return {string} String to indicate the variable type.
+   */
+  getVarType: function(varName) {
+    return Blockly.Types.NUMBER;
   }
 };
 
@@ -158,6 +361,35 @@ Blockly.Blocks['declare_var_digout'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip(Blockly.Msg.ARD_AS_DIGOUTPUT_PIN_TIP);
+  },
+  /**
+   * Return all variables referenced by this block.
+   * @return {!Array.<string>} List of variable names.
+   * @this Blockly.Block
+   */
+  getVars: function() {
+    return [this.getFieldValue('NAME')];
+  },
+  /**
+   * Notification that a variable is renaming.
+   * If the name matches one of this block's variables, rename it.
+   * @param {string} oldName Previous name of variable.
+   * @param {string} newName Renamed variable.
+   * @this Blockly.Block
+   */
+  renameVar: function(oldName, newName) {
+    if (Blockly.Names.equals(oldName, this.getFieldValue('NAME'))) {
+      this.setFieldValue(newName, 'NAME');
+    }
+  },
+  /**
+   * Gets the variable type selected in the drop down, always an integer.
+   * @param {!string} varName Name of the variable selected in this block to
+   *     check.
+   * @return {string} String to indicate the variable type.
+   */
+  getVarType: function(varName) {
+    return Blockly.Types.NUMBER;
   }
 };
 
@@ -175,6 +407,35 @@ Blockly.Blocks['declare_var_anain'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip(Blockly.Msg.ARD_AS_ANAINPUT_PIN_TIP);
+  },
+  /**
+   * Return all variables referenced by this block.
+   * @return {!Array.<string>} List of variable names.
+   * @this Blockly.Block
+   */
+  getVars: function() {
+    return [this.getFieldValue('NAME')];
+  },
+  /**
+   * Notification that a variable is renaming.
+   * If the name matches one of this block's variables, rename it.
+   * @param {string} oldName Previous name of variable.
+   * @param {string} newName Renamed variable.
+   * @this Blockly.Block
+   */
+  renameVar: function(oldName, newName) {
+    if (Blockly.Names.equals(oldName, this.getFieldValue('NAME'))) {
+      this.setFieldValue(newName, 'NAME');
+    }
+  },
+  /**
+   * Gets the variable type selected in the drop down, always an integer.
+   * @param {!string} varName Name of the variable selected in this block to
+   *     check.
+   * @return {string} String to indicate the variable type.
+   */
+  getVarType: function(varName) {
+    return Blockly.Types.NUMBER;
   }
 };
 
@@ -192,6 +453,34 @@ Blockly.Blocks['declare_var_anaout'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip(Blockly.Msg.ARD_AS_ANAOUTPUT_PIN_TIP);
+  },
+  /**
+   * Return all variables referenced by this block.
+   * @return {!Array.<string>} List of variable names.
+   * @this Blockly.Block
+   */
+  getVars: function() {
+    return [this.getFieldValue('NAME')];
+  },
+  /**
+   * Notification that a variable is renaming.
+   * If the name matches one of this block's variables, rename it.
+   * @param {string} oldName Previous name of variable.
+   * @param {string} newName Renamed variable.
+   * @this Blockly.Block
+   */
+  renameVar: function(oldName, newName) {
+    if (Blockly.Names.equals(oldName, this.getFieldValue('NAME'))) {
+      this.setFieldValue(newName, 'NAME');
+    }
+  },
+  /**
+   * Gets the variable type selected in the drop down, always an integer.
+   * @param {!string} varName Name of the variable selected in this block to
+   *     check.
+   * @return {string} String to indicate the variable type.
+   */
+  getVarType: function(varName) {
+    return Blockly.Types.NUMBER;
   }
-
 };

@@ -31,7 +31,9 @@ Blockly.Arduino['declare_var_int'] = function(block) {
   var value_name = block.getFieldValue('NAME');
   var value_num = Blockly.Arduino.valueToCode(block, "NUM", Blockly.Arduino.ORDER_ATOMIC) || '0';
   
-  Blockly.Arduino.addDeclaration('varint_' + value_name,  'int ' + value_name + ' = ' + value_num + ';');
+  //remove previous possible automatic declaration
+  delete Blockly.Arduino.definitions_["auto_" + value_name];
+  Blockly.Arduino.addDeclaration(value_name,  'int ' + value_name + ' = ' + value_num + ';');
   var code = ''
   return code;
 };
@@ -40,7 +42,9 @@ Blockly.Arduino['declare_var_uint'] = function(block) {
   var value_name = block.getFieldValue('NAME');
   var value_num = Blockly.Arduino.valueToCode(block, "NUM", Blockly.Arduino.ORDER_ATOMIC) || '0';
   
-  Blockly.Arduino.addDeclaration('varuint_' + value_name,  'unsigned int ' + value_name + ' = ' + value_num + ';');
+  //remove previous possible automatic declaration
+  delete Blockly.Arduino.definitions_["auto_" + value_name];
+  Blockly.Arduino.addDeclaration(value_name,  'unsigned int ' + value_name + ' = ' + value_num + ';');
   var code = ''
   return code;
 };
@@ -49,7 +53,9 @@ Blockly.Arduino['declare_var_long'] = function(block) {
   var value_name = block.getFieldValue('NAME');
   var value_num = Blockly.Arduino.valueToCode(block, "NUM", Blockly.Arduino.ORDER_ATOMIC) || '0';
   
-  Blockly.Arduino.addDeclaration('varlong_' + value_name,  'long ' + value_name + ' = ' + value_num + 'L;');
+  //remove previous possible automatic declaration
+  delete Blockly.Arduino.definitions_["auto_" + value_name];
+  Blockly.Arduino.addDeclaration(value_name,  'long ' + value_name + ' = ' + value_num + 'L;');
   var code = ''
   return code;
 };
@@ -58,7 +64,9 @@ Blockly.Arduino['declare_var_ulong'] = function(block) {
   var value_name = block.getFieldValue('NAME');
   var value_num = Blockly.Arduino.valueToCode(block, "NUM", Blockly.Arduino.ORDER_ATOMIC) || '0';
   
-  Blockly.Arduino.addDeclaration('varulong_' + value_name,  'unsigned long ' + value_name + ' = ' + value_num + 'UL;');
+  //remove previous possible automatic declaration
+  delete Blockly.Arduino.definitions_["auto_" + value_name];
+  Blockly.Arduino.addDeclaration(value_name,  'unsigned long ' + value_name + ' = ' + value_num + 'UL;');
   var code = ''
   return code;
 };
@@ -67,7 +75,9 @@ Blockly.Arduino['declare_var_float'] = function(block) {
   var value_name = block.getFieldValue('NAME');
   var value_num = Blockly.Arduino.valueToCode(block, "NUM", Blockly.Arduino.ORDER_ATOMIC) || '0';
   
-  Blockly.Arduino.addDeclaration('varfloat_' + value_name,  'float ' + value_name + ' = ' + value_num + ';');
+  //remove previous possible automatic declaration
+  delete Blockly.Arduino.definitions_["auto_" + value_name];
+  Blockly.Arduino.addDeclaration(value_name,  'float ' + value_name + ' = ' + value_num + ';');
   var code = ''
   return code;
 };
@@ -76,7 +86,9 @@ Blockly.Arduino['declare_var_bool'] = function(block) {
   var value_name = block.getFieldValue('NAME');
   var value_num = Blockly.Arduino.valueToCode(block, "NUM", Blockly.Arduino.ORDER_ATOMIC) || 'false';
   
-  Blockly.Arduino.addDeclaration('varbool_' + value_name,  'boolean ' + value_name + ' = ' + value_num + ';');
+  //remove previous possible automatic declaration
+  delete Blockly.Arduino.definitions_["auto_" + value_name];
+  Blockly.Arduino.addDeclaration(value_name,  'boolean ' + value_name + ' = ' + value_num + ';');
   var code = ''
   return code;
 };
@@ -86,7 +98,9 @@ Blockly.Arduino['declare_var_digin'] = function(block) {
   
   var pin = block.getFieldValue('PIN');
   
-  Blockly.Arduino.addDeclaration('varint_' + value_name,  'int ' + value_name + ' = ' + pin + ';');
+  //remove previous possible automatic declaration
+  delete Blockly.Arduino.definitions_["auto_" + value_name];
+  Blockly.Arduino.addDeclaration(value_name,  'int ' + value_name + ' = ' + pin + ';');
   
   Blockly.Arduino.reservePin(
       block, value_name, Blockly.Arduino.PinTypes.INPUT, 'Digital Read');
@@ -105,7 +119,9 @@ Blockly.Arduino['declare_var_digout'] = function(block) {
   
   var pin = block.getFieldValue('PIN');
   
-  Blockly.Arduino.addDeclaration('varint_' + value_name,  'int ' + value_name + ' = ' + pin + ';');
+  //remove previous possible automatic declaration
+  delete Blockly.Arduino.definitions_["auto_" + value_name];
+  Blockly.Arduino.addDeclaration(value_name,  'int ' + value_name + ' = ' + pin + ';');
   
   Blockly.Arduino.reservePin(
       block, value_name, Blockly.Arduino.PinTypes.OUTPUT, 'Digital Write');
@@ -124,7 +140,9 @@ Blockly.Arduino['declare_var_anain'] = function(block) {
   
   var pin = block.getFieldValue('PIN');
   
-  Blockly.Arduino.addDeclaration('varint_' + value_name,  'int ' + value_name + ' = ' + pin + ';');
+  //remove previous possible automatic declaration
+  delete Blockly.Arduino.definitions_["auto_" + value_name];
+  Blockly.Arduino.addDeclaration(value_name,  'int ' + value_name + ' = ' + pin + ';');
   
   Blockly.Arduino.reservePin(
       block, value_name, Blockly.Arduino.PinTypes.INPUT, 'Analogue Read');
@@ -143,7 +161,9 @@ Blockly.Arduino['declare_var_anaout'] = function(block) {
   
   var pin = block.getFieldValue('PIN');
   
-  Blockly.Arduino.addDeclaration('varint_' + value_name,  'int ' + value_name + ' = ' + pin + ';');
+  //remove previous possible automatic declaration
+  delete Blockly.Arduino.definitions_["auto_" + value_name];
+  Blockly.Arduino.addDeclaration(value_name,  'int ' + value_name + ' = ' + pin + ';');
   
   Blockly.Arduino.reservePin(
       block, pin, Blockly.Arduino.PinTypes.OUTPUT, 'Analogue Write');
