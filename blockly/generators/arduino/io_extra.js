@@ -12,7 +12,6 @@
 goog.provide('Blockly.Arduino.IO_EXTRA');
 
 goog.require('Blockly.Arduino');
-goog.require('Blockly.Arduino.IO');
 
 
 /**

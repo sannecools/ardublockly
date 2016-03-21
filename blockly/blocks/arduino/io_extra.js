@@ -16,7 +16,6 @@ goog.provide('Blockly.Blocks.io_extra');
 
 goog.require('Blockly.Blocks');
 goog.require('Blockly.Types');
-goog.require('Blockly.io');
 
 Blockly.Blocks['io_pin_dig'] = {
   init: function() {
