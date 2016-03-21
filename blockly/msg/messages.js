@@ -1127,7 +1127,7 @@ Blockly.Msg.ARD_MAP_TIP = 'Re-maps a number from [0-1024] to another.';
 Blockly.Msg.ARD_FUN_RUN_SETUP = 'Arduino run first:';
 Blockly.Msg.ARD_FUN_RUN_LOOP = 'Arduino loop forever:';
 Blockly.Msg.ARD_FUN_RUN_TIP = 'Defines the Arduino setup() and loop() functions.';
-Blockly.Msg.ARD_PIN_WARN1 = 'Pin %1 is needed for %2 as pin %3.\nAlready used as %4.';
+Blockly.Msg.ARD_PIN_WARN1 = 'Pin %1 is needed for %2 as pin %3. Already used as %4.';
 Blockly.Msg.ARD_SERIAL_SETUP = 'Setup';
 Blockly.Msg.ARD_SERIAL_SPEED = ':  speed to';
 Blockly.Msg.ARD_SERIAL_BPS = 'bps';
@@ -1199,5 +1199,56 @@ Blockly.Msg.ARD_TIME_INF_TIP = 'Wait indefinitely, stopping the program.'
 Blockly.Msg.ARD_VAR_AS = 'as';
 Blockly.Msg.ARD_VAR_AS_TIP = 'Sets a value to a specific type';
 Blockly.Msg.REPLACE_EXISTING_BLOCKS = 'Replace existing blocks? "Cancel" will merge.';
+
+
+//Arduino blocks define as a specific type
+Blockly.Msg.ARD_AS_BOOL_NUMBER = 'as boolean';
+//Arduino blocks define as a specific type
+Blockly.Msg.ARD_AS_INTEGER_NUMBER = 'as integer number';
+//Arduino blocks define as a specific type
+Blockly.Msg.ARD_AS_UINT_NUMBER = 'as positive integer number';
+//Arduino blocks define as a specific type
+Blockly.Msg.ARD_AS_LONG_NUMBER = 'as long integer number';
+//Arduino blocks define as a specific type
+Blockly.Msg.ARD_AS_ULONG_NUMBER = 'as long positive integer number';
+//Arduino blocks define as a specific type
+Blockly.Msg.ARD_AS_FLOAT_NUMBER = 'as decimal number';
+Blockly.Msg.ARD_AS_BOOL_NUMBER_TIP = 'Declare a variable as boolean with value true or false';
+//Arduino blocks define as a specific type tip
+Blockly.Msg.ARD_AS_INTEGER_NUMBER_TIP = 'Declare a variable as integer, -32768 to 32767';
+//Arduino blocks define as a specific type tip
+Blockly.Msg.ARD_AS_UINT_NUMBER_TIP = 'Declare a variable as a positive integer, 0 to 65535';
+//Arduino blocks define as a specific type tip
+Blockly.Msg.ARD_AS_LONG_NUMBER_TIP = 'Declare a variable as a long integer, -2,147,483,648 to 2,147,483,647';
+//Arduino blocks define as a specific type tip
+Blockly.Msg.ARD_AS_ULONG_NUMBER_TIP = 'Declare a variable as a long positive integer, 0 to 4,294,967,295';
+//Arduino blocks define as a specific type tip
+Blockly.Msg.ARD_AS_FLOAT_NUMBER_TIP = 'Declare a variable as a decimal number, eg 3.6 or 5e4 or -3.14';
+
+Blockly.Msg.ARD_AS_DIGINPUT_PIN = 'as digital input';
+Blockly.Msg.ARD_AS_DIGINPUT_PIN_TIP = 'Declare a variable as a digital input pin';
+Blockly.Msg.ARD_AS_DIGOUTPUT_PIN = 'as digital output';
+Blockly.Msg.ARD_AS_DIGOUTPUT_PIN_TIP = 'Declare a variable as a digital output pin';
+Blockly.Msg.ARD_AS_ANAINPUT_PIN = 'as analog input';
+Blockly.Msg.ARD_AS_ANAINPUT_PIN_TIP = 'Declare a variable as a analog input pin';
+Blockly.Msg.ARD_AS_ANAOUTPUT_PIN = 'as analg output';
+Blockly.Msg.ARD_AS_ANAOUTPUT_PIN_TIP = 'Declare a variable as a analog PWM output pin';
+
+
+Blockly.Msg.ARD_DIGITALWRITEVAR_TIP = 'Write digital value to a Port, the value and port can be computed variables';
+
+Blockly.Msg.ARD_PIN_AN = 'analog pin';
+Blockly.Msg.ARD_PIN_DIG = 'digital pin';
+Blockly.Msg.ARD_PIN_PWM = 'PWM pin';
+Blockly.Msg.ARD_PIN_AN_TIP = 'One of the analog pins of the Arduino Board';
+Blockly.Msg.ARD_PIN_DIG_TIP = 'One of the digital pins of the Arduino Board';
+Blockly.Msg.ARD_PIN_PWM_TIP = 'One of the Pulse Width Modeling (PWM) pins of the Arduino Board';
+
+//GUI specific translations
+Blockly.Msg.UPLOAD_CLICK_1 = 'To Upload your code to Arduino:';
+Blockly.Msg.UPLOAD_CLICK_2 = '  1. click on the Arduino tab';
+Blockly.Msg.UPLOAD_CLICK_3 = '  2. select all the code, and copy (CTRL+A and CTRL+C)';
+Blockly.Msg.UPLOAD_CLICK_4 = '  3. In the Arduino IDE or in a http://codebender.cc sketch, paste the code (CTRL+V)';
+Blockly.Msg.UPLOAD_CLICK_5 = '  4. Upload to your connected Arduino';
 
 
