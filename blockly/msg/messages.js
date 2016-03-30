@@ -1232,6 +1232,12 @@ Blockly.Msg.ARD_PIN_PWM = 'PWM pin';
 Blockly.Msg.ARD_PIN_AN_TIP = 'One of the analog pins of the Arduino Board';
 Blockly.Msg.ARD_PIN_DIG_TIP = 'One of the digital pins of the Arduino Board';
 Blockly.Msg.ARD_PIN_PWM_TIP = 'One of the Pulse Width Modeling (PWM) pins of the Arduino Board';
+Blockly.Msg.ARD_PULSEREAD = 'Read';
+Blockly.Msg.ARD_PULSEON = 'pulse on pin #';
+Blockly.Msg.ARD_PULSETIMEOUT = 'timeout after';
+Blockly.Msg.ARD_PULSETIMEOUT_MS = '';
+Blockly.Msg.ARD_PULSE_TIP = 'Measures the duration of a pulse on the selected pin.';
+Blockly.Msg.ARD_PULSETIMEOUT_TIP = 'Measures the duration of a pulse on the selected pin, if it is within the timeout.';
 
 //GUI specific translations
 Blockly.Msg.UPLOAD_CLICK_1 = 'To Upload your code to Arduino:';
