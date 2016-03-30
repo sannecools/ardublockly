@@ -39,7 +39,7 @@ Blockly.Blocks['declare_var_bool'] = {
         .appendField(Blockly.Msg.ARD_DEFINE)
         .appendField(new Blockly.FieldVariable("item"), "NAME")
         .appendField(Blockly.Msg.ARD_AS_BOOL_NUMBER)
-        .setCheck(Blockly.Types.BOOLEAN.compatibles());
+        .setCheck(Blockly.Types.BOOLEAN.check);
     this.setInputsInline(false);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -84,7 +84,7 @@ Blockly.Blocks['declare_var_int'] = {
         .appendField(Blockly.Msg.ARD_DEFINE)
         .appendField(new Blockly.FieldVariable("item"), "NAME")
         .appendField(Blockly.Msg.ARD_AS_INTEGER_NUMBER)
-        .setCheck(Blockly.Types.NUMBER.compatibles());
+        .setCheck(Blockly.Types.NUMBER.checkList);
     this.setInputsInline(false);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -129,7 +129,7 @@ Blockly.Blocks['declare_var_float'] = {
         .appendField(Blockly.Msg.ARD_DEFINE)
         .appendField(new Blockly.FieldVariable("item"), "NAME")
         .appendField(Blockly.Msg.ARD_AS_FLOAT_NUMBER)
-        .setCheck(Blockly.Types.NUMBER.compatibles());
+        .setCheck(Blockly.Types.NUMBER.checkList);
     this.setInputsInline(false);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -174,7 +174,7 @@ Blockly.Blocks['declare_var_long'] = {
         .appendField(Blockly.Msg.ARD_DEFINE)
         .appendField(new Blockly.FieldVariable("item"), "NAME")
         .appendField(Blockly.Msg.ARD_AS_LONG_NUMBER)
-        .setCheck(Blockly.Types.NUMBER.compatibles());
+        .setCheck(Blockly.Types.NUMBER.checkList);
     this.setInputsInline(false);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -219,7 +219,7 @@ Blockly.Blocks['declare_var_uint'] = {
         .appendField(Blockly.Msg.ARD_DEFINE)
         .appendField(new Blockly.FieldVariable("item"), "NAME")
         .appendField(Blockly.Msg.ARD_AS_UINT_NUMBER)
-        .setCheck(Blockly.Types.NUMBER.compatibles());
+        .setCheck(Blockly.Types.NUMBER.checkList);
     this.setInputsInline(false);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -264,7 +264,7 @@ Blockly.Blocks['declare_var_ulong'] = {
         .appendField(Blockly.Msg.ARD_DEFINE)
         .appendField(new Blockly.FieldVariable("item"), "NAME")
         .appendField(Blockly.Msg.ARD_AS_ULONG_NUMBER)
-        .setCheck(Blockly.Types.NUMBER.compatibles());
+        .setCheck(Blockly.Types.NUMBER.checkList);
     this.setInputsInline(false);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);

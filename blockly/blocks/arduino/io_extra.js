@@ -101,7 +101,7 @@ Blockly.Blocks['io_digitalwrite_var'] = {
         .appendField(Blockly.Msg.ARD_DIGITALWRITE)
         .appendField(new Blockly.FieldVariable("item"), "PIN")
         .appendField(Blockly.Msg.ARD_WRITE_TO)
-        .setCheck(Blockly.Types.BOOLEAN.compatibles());
+        .setCheck(Blockly.Types.BOOLEAN.check);
     this.setInputsInline(false);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -120,7 +120,7 @@ Blockly.Blocks['io_digitalread_var'] = {
     this.appendDummyInput()
         .appendField(Blockly.Msg.ARD_DIGITALREAD)
         .appendField(new Blockly.FieldVariable("item"), "PIN");
-    this.setOutput(true, Blockly.Types.BOOLEAN.basicType);
+    this.setOutput(true, Blockly.Types.BOOLEAN.output);
     this.setTooltip(Blockly.Msg.ARD_DIGITALREAD_TIP);
   },
   /** @return {!string} The type of return value for the block, an integer. */
@@ -141,7 +141,7 @@ Blockly.Blocks['io_analogwrite_var'] = {
         .appendField(Blockly.Msg.ARD_ANALOGWRITE)
         .appendField(new Blockly.FieldVariable("item"), "PIN")
         .appendField(Blockly.Msg.ARD_WRITE_TO)
-        .setCheck(Blockly.Types.NUMBER.basicType);
+        .setCheck(Blockly.Types.NUMBER.output);
     this.setInputsInline(false);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -171,7 +171,7 @@ Blockly.Blocks['io_analogread_var'] = {
     this.appendDummyInput()
         .appendField(Blockly.Msg.ARD_ANALOGREAD)
         .appendField(new Blockly.FieldVariable("item"), "PIN");
-    this.setOutput(true, Blockly.Types.NUMBER.basicType);
+    this.setOutput(true, Blockly.Types.NUMBER.output);
     this.setTooltip(Blockly.Msg.ARD_ANALOGREAD_TIP);
   },
   /** @return {!string} The type of return value for the block, an integer. */
