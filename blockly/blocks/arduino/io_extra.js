@@ -106,6 +106,35 @@ Blockly.Blocks['io_digitalwrite_var'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip(Blockly.Msg.ARD_DIGITALWRITEVAR_TIP);
+  },
+  /**
+   * Return all variables referenced by this block.
+   * @return {!Array.<string>} List of variable names.
+   * @this Blockly.Block
+   */
+  getVars: function() {
+    return [this.getFieldValue('PIN')];
+  },
+  /**
+   * Notification that a variable is renaming.
+   * If the name matches one of this block's variables, rename it.
+   * @param {string} oldName Previous name of variable.
+   * @param {string} newName Renamed variable.
+   * @this Blockly.Block
+   */
+  renameVar: function(oldName, newName) {
+    if (Blockly.Names.equals(oldName, this.getFieldValue('PIN'))) {
+      this.setFieldValue(newName, 'PIN');
+    }
+  },
+  /**
+   * Gets the variable type required.
+   * @param {!string} varName Name of the variable selected in this block to
+   *     check.
+   * @return {string} String to indicate the variable type.
+   */
+  getVarType: function(varName) {
+    return Blockly.Types.NUMBER;
   }
 };
 
@@ -123,9 +152,38 @@ Blockly.Blocks['io_digitalread_var'] = {
     this.setOutput(true, Blockly.Types.BOOLEAN.output);
     this.setTooltip(Blockly.Msg.ARD_DIGITALREAD_TIP);
   },
-  /** @return {!string} The type of return value for the block, an integer. */
+  /** @return {!string} The type of return value for the block, a bool. */
   getBlockType: function() {
     return Blockly.Types.BOOLEAN;
+  },
+  /**
+   * Return all variables referenced by this block.
+   * @return {!Array.<string>} List of variable names.
+   * @this Blockly.Block
+   */
+  getVars: function() {
+    return [this.getFieldValue('PIN')];
+  },
+  /**
+   * Notification that a variable is renaming.
+   * If the name matches one of this block's variables, rename it.
+   * @param {string} oldName Previous name of variable.
+   * @param {string} newName Renamed variable.
+   * @this Blockly.Block
+   */
+  renameVar: function(oldName, newName) {
+    if (Blockly.Names.equals(oldName, this.getFieldValue('PIN'))) {
+      this.setFieldValue(newName, 'PIN');
+    }
+  },
+  /**
+   * Gets the variable type required.
+   * @param {!string} varName Name of the variable selected in this block to
+   *     check.
+   * @return {string} String to indicate the variable type.
+   */
+  getVarType: function(varName) {
+    return Blockly.Types.NUMBER;
   }
 };
 
@@ -147,17 +205,39 @@ Blockly.Blocks['io_analogwrite_var'] = {
     this.setNextStatement(true, null);
     this.setTooltip(Blockly.Msg.ARD_ANALOGWRITE_TIP);
   },
-  /**
-   * Updates the content of the the pin related fields.
-   * @this Blockly.Block
-   */
-  updateFields: function() {
-    Blockly.Arduino.Boards.refreshBlockFieldDropdown(this, 'PIN', 'pwmPins');
-  },
   /** @return {!string} The type of input value for the block, an integer. */
   getBlockType: function() {
     return Blockly.Types.NUMBER;
   },
+  /**
+   * Return all variables referenced by this block.
+   * @return {!Array.<string>} List of variable names.
+   * @this Blockly.Block
+   */
+  getVars: function() {
+    return [this.getFieldValue('PIN')];
+  },
+  /**
+   * Notification that a variable is renaming.
+   * If the name matches one of this block's variables, rename it.
+   * @param {string} oldName Previous name of variable.
+   * @param {string} newName Renamed variable.
+   * @this Blockly.Block
+   */
+  renameVar: function(oldName, newName) {
+    if (Blockly.Names.equals(oldName, this.getFieldValue('PIN'))) {
+      this.setFieldValue(newName, 'PIN');
+    }
+  },
+  /**
+   * Gets the variable type required.
+   * @param {!string} varName Name of the variable selected in this block to
+   *     check.
+   * @return {string} String to indicate the variable type.
+   */
+  getVarType: function(varName) {
+    return Blockly.Types.NUMBER;
+  }
 };
 
 Blockly.Blocks['io_analogread_var'] = {
@@ -179,10 +259,138 @@ Blockly.Blocks['io_analogread_var'] = {
     return Blockly.Types.NUMBER;
   },
   /**
-   * Updates the content of the the pin related fields.
+   * Return all variables referenced by this block.
+   * @return {!Array.<string>} List of variable names.
    * @this Blockly.Block
    */
-  updateFields: function() {
-    Blockly.Arduino.Boards.refreshBlockFieldDropdown(this, 'PIN', 'analogPins');
+  getVars: function() {
+    return [this.getFieldValue('PIN')];
+  },
+  /**
+   * Notification that a variable is renaming.
+   * If the name matches one of this block's variables, rename it.
+   * @param {string} oldName Previous name of variable.
+   * @param {string} newName Renamed variable.
+   * @this Blockly.Block
+   */
+  renameVar: function(oldName, newName) {
+    if (Blockly.Names.equals(oldName, this.getFieldValue('PIN'))) {
+      this.setFieldValue(newName, 'PIN');
+    }
+  },
+  /**
+   * Gets the variable type required.
+   * @param {!string} varName Name of the variable selected in this block to
+   *     check.
+   * @return {string} String to indicate the variable type.
+   */
+  getVarType: function(varName) {
+    return Blockly.Types.NUMBER;
+  }
+};
+
+Blockly.Blocks['io_pulsein_var'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.ARD_PULSEREAD);
+    this.appendValueInput("PULSETYPE")
+        .setCheck(Blockly.Types.BOOLEAN.check);
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.ARD_PULSEON)
+        .appendField(new Blockly.FieldVariable("item"), "PULSEPIN");
+    this.setOutput(true);
+    this.setInputsInline(true);
+    this.setColour(Blockly.Blocks.io.HUE);
+    this.setTooltip(Blockly.Msg.ARD_PULSE_TIP);
+    this.setHelpUrl('https://www.arduino.cc/en/Reference/PulseIn');
+  },
+      /** @return {!string} The type of input value for the block, an integer. */
+  getBlockType: function() {
+    return Blockly.Types.NUMBER;
+  },
+  /**
+   * Return all variables referenced by this block.
+   * @return {!Array.<string>} List of variable names.
+   * @this Blockly.Block
+   */
+  getVars: function() {
+    return [this.getFieldValue('PULSEPIN')];
+  },
+  /**
+   * Notification that a variable is renaming.
+   * If the name matches one of this block's variables, rename it.
+   * @param {string} oldName Previous name of variable.
+   * @param {string} newName Renamed variable.
+   * @this Blockly.Block
+   */
+  renameVar: function(oldName, newName) {
+    if (Blockly.Names.equals(oldName, this.getFieldValue('PULSEPIN'))) {
+      this.setFieldValue(newName, 'PULSEPIN');
+    }
+  },
+  /**
+   * Gets the variable type required.
+   * @param {!string} varName Name of the variable selected in this block to
+   *     check.
+   * @return {string} String to indicate the variable type.
+   */
+  getVarType: function(varName) {
+    return Blockly.Types.NUMBER;
+  }
+};
+
+Blockly.Blocks['io_pulsetimeout_var'] = {
+  init: function () {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.ARD_PULSEREAD);
+    this.appendValueInput("PULSETYPE")
+        .setCheck(Blockly.Types.BOOLEAN.check);
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.ARD_PULSEON)
+        .appendField(new Blockly.FieldVariable("item"), "PULSEPIN");
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.ARD_PULSETIMEOUT);
+    this.appendValueInput('TIMEOUT')
+        .setCheck(Blockly.Types.NUMBER.output);
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.ARD_PULSETIMEOUT_MS);
+    this.setOutput(true);
+    this.setInputsInline(true);
+    this.setColour(Blockly.Blocks.io.HUE);
+    this.setTooltip(Blockly.Msg.ARD_PULSETIMEOUT_TIP);
+    this.setHelpUrl('https://www.arduino.cc/en/Reference/PulseIn');
+  },
+        /** @return {!string} The type of input value for the block, an integer. */
+  getBlockType: function() {
+    return Blockly.Types.NUMBER;
+  },
+  /**
+   * Return all variables referenced by this block.
+   * @return {!Array.<string>} List of variable names.
+   * @this Blockly.Block
+   */
+  getVars: function() {
+    return [this.getFieldValue('PULSEPIN')];
+  },
+  /**
+   * Notification that a variable is renaming.
+   * If the name matches one of this block's variables, rename it.
+   * @param {string} oldName Previous name of variable.
+   * @param {string} newName Renamed variable.
+   * @this Blockly.Block
+   */
+  renameVar: function(oldName, newName) {
+    if (Blockly.Names.equals(oldName, this.getFieldValue('PULSEPIN'))) {
+      this.setFieldValue(newName, 'PULSEPIN');
+    }
+  },
+  /**
+   * Gets the variable type required.
+   * @param {!string} varName Name of the variable selected in this block to
+   *     check.
+   * @return {string} String to indicate the variable type.
+   */
+  getVarType: function(varName) {
+    return Blockly.Types.NUMBER;
   }
 };
