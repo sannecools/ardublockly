@@ -1,7 +1,7 @@
 {
 	"@metadata": {
 		"author": "Ellen Spertus <ellen.spertus@gmail.com>",
-		"lastupdated": "2016-03-29 09:49:39.163388",
+		"lastupdated": "2016-04-02 10:13:05.083267",
 		"locale": "en",
 		"messagedocumentation" : "qqq"
 	},
@@ -475,6 +475,18 @@
 	"ARD_PIN_AN_TIP": "One of the analog pins of the Arduino Board",
 	"ARD_PIN_DIG_TIP": "One of the digital pins of the Arduino Board",
 	"ARD_PIN_PWM_TIP": "One of the Pulse Width Modeling (PWM) pins of the Arduino Board",
+	"ARD_PULSEREAD": "Read",
+	"ARD_PULSEON": "pulse on pin #",
+	"ARD_PULSETIMEOUT": "timeout after",
+	"ARD_PULSETIMEOUT_MS": "",
+	"ARD_PULSE_TIP": "Measures the duration of a pulse on the selected pin.",
+	"ARD_PULSETIMEOUT_TIP": "Measures the duration of a pulse on the selected pin, if it is within the timeout.",
+	"ARD_SETTONE": "Set tone on pin #",
+	"ARD_TONEFREQ": "at frequency",
+	"ARD_TONE_TIP": "Sets tone on pin to specified frequency within range 31 - 65535",
+	"ARD_TONE_WARNING": "Frequency must be in range 31 - 65535",
+	"ARD_NOTONE": "Turn off tone on pin #",
+	"ARD_NOTONE_TIP": "Turns the tone off on the selected pin",
 	"UPLOAD_CLICK_1": "To Upload your code to Arduino:",
 	"UPLOAD_CLICK_2": "  1. click on the Arduino tab",
 	"UPLOAD_CLICK_3": "  2. select all the code, and copy (CTRL+A and CTRL+C)",
