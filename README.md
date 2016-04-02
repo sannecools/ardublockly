@@ -128,3 +128,12 @@ limitations under the License.
 [desktop_screeshot]: http://carlosperate.github.io/ardublockly/images/screenshot_desktop_1.png
 [web_screenshot_responsive]: http://carlosperate.github.io/ardublockly/images/screenshot_material_all_small.jpg
 [web_screenshot_classic]: http://carlosperate.github.io/ardublockly/images/screenshot_1.png
+
+## blockly4arduino branch
+Here development happens for the Blockly4Arduino website version of ArduBlockly.
+
+In master: `git pull https://github.com/carlosperate/ardublockly.git master`
+
+in branch blockly4arduino, regularly merge master, and do necessary updates.
+
+This branch tries out some different concepts: declare block, variable assign for pins, ... These might make it in due time, in one form or another, into official ardublockly.
