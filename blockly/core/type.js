@@ -90,8 +90,7 @@ Blockly.Type.prototype.generateCheckList_ = function(compatibleType) {
  * @param {!Blockly.Type} compatibleType New type to add to compatibility list.
  */
 Blockly.Type.prototype.addCompatibleType = function(compatibleType) {
-  if (!compatibleType || !compatibleType.constructor ||
-      compatibleType.constructor.name !== 'BlocklyType') {
+  if (!compatibleType || !compatibleType.constructor) {
     throw new Error('To add a compatible type to ' + this.typeName +
                     ' provide a Blockly.Type object.');
   }
@@ -110,8 +109,7 @@ Blockly.Type.prototype.addCompatibleTypes = function(compatibleTypeArray) {
                     this.typeName +' provide an array of Blockly.Type items.');
   }
   for (var i = 0; i < compatibleTypeArray.length; i++) {
-    if (!compatibleTypeArray[i] || !compatibleTypeArray[i].constructor ||
-        compatibleTypeArray[i].constructor.name !== 'BlocklyType') {
+    if (!compatibleTypeArray[i] || !compatibleTypeArray[i].constructor) {
       throw new Error('To add a compatible type to ' + this.typeName + ' you ' +
                       'must point to a Blockly.Type object.');
     }
