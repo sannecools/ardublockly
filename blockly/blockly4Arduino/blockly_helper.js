@@ -172,7 +172,7 @@ function onSuccess() {
         return;
       }
       var count = Blockly.mainWorkspace.getAllBlocks().length;
-      if (count && confirm('Replace existing blocks?\n"Cancel" will merge.')) {
+      if (count && confirm(Blockly.Msg.REPLACE_EXISTING_BLOCKS)) {
         Blockly.mainWorkspace.clear();
       }
       Blockly.Xml.domToWorkspace(Blockly.mainWorkspace, xml);
