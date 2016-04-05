@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html manifest=node.manifest>
 <head>
   <meta charset="utf-8">
@@ -56,6 +57,11 @@
   <script type="text/javascript" src="spin.js"></script>
   <script type="text/javascript" src="FileSaver.min.js"></script>
   <script type="text/javascript" src="blockly_helper.js"></script>
+
+  <link rel="stylesheet" href="../libs/bootstrap/css/bootstrap.min.css">
+  <script src="../libs/jquery/jquery-1.12.2.min.js"></script>
+  <script src="../libs/bootstrap/js/bootstrap.min.js"></script>
+
   <script>
 
 /**
@@ -347,15 +353,31 @@ function init() {
             <td class="tabmin">&nbsp;</td>
             <td id="tab_xml" class="taboff" onclick="tabClick('xml')">XML</td>
             <td class="tabmax">
-              <button type="button" onclick="uploadClick()">Upload</button>
-              <!--<button type="button" onclick="resetClick()">Reset</button> -->
-              <button type="button" onclick="ledupClick()">LedUpStart</button>
-              <button onclick="discard()">Discard</button>
-              <button onclick="saveCode()">Save Arduino Code</button>
-              <button onclick="save()">Save XML</button>
-              <button id="fakeload">Load XML</button>
-              <input type="file" id="load" style="display: none;"/>
-              <!--button class="launch" onclick="runJS()">Run Program</button-->
+              <div class="dropdown">
+              <div class="btn-group">
+                <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-toggle="dropdown">Examples
+                  <span class="caret"></span></button>
+                  <ul class="dropdown-menu">
+                    <li class="dropdown-header">Basic Examples</li>
+                    <li><a href="index_en.html?url=examples/Blink.xml">01: Blink</a></li>
+                    <li><a href="index_en.html?url=examples/AnologReadSerial.xml">02: Analog Read, serial monitor</a></li>
+                    <li class="dropdown-header">Digital</li>
+                    <li><a href="index_en.html?url=examples/BlinkNoDelay.xml">01: Blink No Delay</a></li>
+                    <li class="dropdown-header">LedUpKidz</li>
+                    <li><a href="index_en.html?url=examples/LedUpKidz_01_aan_uit_en.xml">01: Flashing</a></li>
+                    <li><a href="index_en.html?url=examples/LedUpKidz_02_ronddraaien_en.xml">02: Wheel Effect</a></li>
+                    <li><a href="index_en.html?url=examples/LedUpKidz_03_versnellen_en.xml">03: Faster and faster</a></li>
+                    <li><a href="index_en.html?url=examples/LedUpKidz_04_combineren_en.xml">04: Combining Effects</a></li>
+                  </ul>
+                <button type="button" class="btn btn-default btn-sm" onclick="uploadClick()">Upload</button>
+                <button type="button" class="btn btn-warning btn-sm" onclick="discard()">Discard</button>
+                <button type="button" class="btn btn-info btn-sm" onclick="saveCode()">Save Code</button>
+                <button type="button" class="btn btn-info btn-sm" onclick="save()">Save XML</button>
+                <button type="button" class="btn btn-info btn-sm" id="fakeload">Load XML</button>
+                <input type="file" id="load" style="display: none;"/>
+                <!--button class="launch" onclick="runJS()">Run Program</button-->
+              </div>
+              </div>
             </td>
           </tr>
         </table>
