@@ -19,7 +19,7 @@ goog.require('goog.asserts');
  * @param {Object} args Object/dictionary with typeName, and compatibleTypes.
  * @constructor
  */
-Blockly.Type = function BlocklyType(args) {
+Blockly.Type = function(args) {
   if ((args.typeName === undefined) || (args.compatibleTypes === undefined)) {
     throw new Error('Creating a Type requires the following format:\n{\n' +
                     '  typeName: string,\n' +
@@ -90,7 +90,8 @@ Blockly.Type.prototype.generateCheckList_ = function(compatibleType) {
  * @param {!Blockly.Type} compatibleType New type to add to compatibility list.
  */
 Blockly.Type.prototype.addCompatibleType = function(compatibleType) {
-  if (!compatibleType || !compatibleType.constructor) {
+  if (!compatibleType || !compatibleType.constructor ||
+      !(compatibleType instanceof Blockly.Type)) {
     throw new Error('To add a compatible type to ' + this.typeName +
                     ' provide a Blockly.Type object.');
   }
@@ -109,7 +110,8 @@ Blockly.Type.prototype.addCompatibleTypes = function(compatibleTypeArray) {
                     this.typeName +' provide an array of Blockly.Type items.');
   }
   for (var i = 0; i < compatibleTypeArray.length; i++) {
-    if (!compatibleTypeArray[i] || !compatibleTypeArray[i].constructor) {
+    if (!compatibleTypeArray[i] || !compatibleTypeArray[i].constructor ||
+        !(compatibleTypeArray[i] instanceof Blockly.Type)) {
       throw new Error('To add a compatible type to ' + this.typeName + ' you ' +
                       'must point to a Blockly.Type object.');
     }

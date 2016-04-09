@@ -1189,7 +1189,6 @@ Blockly.Msg.ARD_VAR_AS = 'as';
 Blockly.Msg.ARD_VAR_AS_TIP = 'Sets a value to a specific type';
 Blockly.Msg.REPLACE_EXISTING_BLOCKS = 'Replace existing blocks? "Cancel" will merge.';
 
-
 //Arduino blocks define as a specific type
 Blockly.Msg.ARD_AS_BOOL_NUMBER = 'as boolean';
 //Arduino blocks define as a specific type
@@ -1251,5 +1250,4 @@ Blockly.Msg.UPLOAD_CLICK_2 = '  1. click on the Arduino tab';
 Blockly.Msg.UPLOAD_CLICK_3 = '  2. select all the code, and copy (CTRL+A and CTRL+C)';
 Blockly.Msg.UPLOAD_CLICK_4 = '  3. In the Arduino IDE or in a http://codebender.cc sketch, paste the code (CTRL+V)';
 Blockly.Msg.UPLOAD_CLICK_5 = '  4. Upload to your connected Arduino';
-
 
