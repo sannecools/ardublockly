@@ -39,6 +39,7 @@ Blockly.Msg.ARD_DIGITALREAD_TIP = "Read digital value on a pin: HIGH or LOW";  /
 Blockly.Msg.ARD_DIGITALWRITE = "set digitial pin#";  // untranslated
 Blockly.Msg.ARD_DIGITALWRITEVAR_TIP = "Write digital value to a Port, the value and port can be computed variables";  // untranslated
 Blockly.Msg.ARD_DIGITALWRITE_TIP = "Write digital value HIGH or LOW to a specific Port";  // untranslated
+Blockly.Msg.ARD_FUN_RUN_DECL = "Arduino define up front:";  // untranslated
 Blockly.Msg.ARD_FUN_RUN_LOOP = "Arduino loop forever:";  // untranslated
 Blockly.Msg.ARD_FUN_RUN_SETUP = "Arduino run first:";  // untranslated
 Blockly.Msg.ARD_FUN_RUN_TIP = "Defines the Arduino setup() and loop() functions.";  // untranslated

@@ -1,7 +1,7 @@
 {
 	"@metadata": {
 		"author": "Ellen Spertus <ellen.spertus@gmail.com>",
-		"lastupdated": "2016-04-09 09:54:53.549485",
+		"lastupdated": "2016-04-09 10:15:05.960830",
 		"locale": "en",
 		"messagedocumentation" : "qqq"
 	},
@@ -384,6 +384,7 @@
 	"ARD_MAP": "Map",
 	"ARD_MAP_VAL": "value to [0-",
 	"ARD_MAP_TIP": "Re-maps a number from [0-1024] to another.",
+	"ARD_FUN_RUN_DECL": "Arduino define up front:",
 	"ARD_FUN_RUN_SETUP": "Arduino run first:",
 	"ARD_FUN_RUN_LOOP": "Arduino loop forever:",
 	"ARD_FUN_RUN_TIP": "Defines the Arduino setup() and loop() functions.",

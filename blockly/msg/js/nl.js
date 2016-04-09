@@ -39,6 +39,7 @@ Blockly.Msg.ARD_DIGITALREAD_TIP = "Geeft waarde terug gelezen op de digitale PIN
 Blockly.Msg.ARD_DIGITALWRITE = "schrijf naar digitale pin#";
 Blockly.Msg.ARD_DIGITALWRITEVAR_TIP = "Schrijf digitale waarde HOOG of LAAG naar een gegeven PIN, de waarde en de pin kunnen berekende variabelen zijn";
 Blockly.Msg.ARD_DIGITALWRITE_TIP = "Schrijf digitale waarde HOOG of LAAG naar de opgegeven PIN";
+Blockly.Msg.ARD_FUN_RUN_DECL = "Arduino definieer vooraf:";
 Blockly.Msg.ARD_FUN_RUN_LOOP = "Arduino herhaal voor altijd:";
 Blockly.Msg.ARD_FUN_RUN_SETUP = "Arduino doe eerst:";
 Blockly.Msg.ARD_FUN_RUN_TIP = "Definieer de Arduino setup() en loop() functies.";
