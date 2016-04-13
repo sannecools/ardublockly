@@ -93,27 +93,21 @@ Blockly.Types.CHILD_BLOCK_MISSING = new Blockly.Type({
   compatibleTypes: []
 });
 
-/** Pin Type: digital pin 
-    Can be used for digitalRead, digitalWrite
-  */
+/** Pin Type: digital pin */
 Blockly.Types.DIGPIN = new Blockly.Type({
   typeId: 'DIGPIN',
   typeName: function() {return Blockly.Msg.ARD_TYPE_DIGPIN;},
   compatibleTypes: []
 });
 
-/** Pin Type: analog pin 
-    Can be used for analogRead
-  */
+/** Pin Type: analog pin */
 Blockly.Types.ANAPIN = new Blockly.Type({
   typeId: 'ANAPIN',
   typeName: function() {return Blockly.Msg.ARD_TYPE_ANAPIN;},
   compatibleTypes: []
 });
 
-/** Pin Type: PWM pin 
-    Can be used for analogWrite on the digital PWM pins
-  */
+/** Pin Type: PWM pin */
 Blockly.Types.PWMPIN = new Blockly.Type({
   typeId: 'PWMPIN',
   typeName: function() {return Blockly.Msg.ARD_TYPE_PWMPIN;},
