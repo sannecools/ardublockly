@@ -27,9 +27,9 @@ Blockly.Blocks['io_pin_dig'] = {
     this.setTooltip(Blockly.Msg.ARD_PIN_DIG_TIP);
     this.setHelpUrl('https://www.arduino.cc/en/Reference/Board');
   },
-  /** @return {!string} The type of return value for the block, an integer. */
+  /** @return {!string} The type of return value for the block, a digital pin. */
   getBlockType: function() {
-    return Blockly.Types.NUMBER;
+    return Blockly.Types.DIGPIN;
   },
   /**
    * Updates the content of the the pin related fields.
@@ -51,9 +51,9 @@ Blockly.Blocks['io_pin_an'] = {
     this.setTooltip(Blockly.Msg.ARD_PIN_AN_TIP);
     this.setHelpUrl('https://www.arduino.cc/en/Reference/Board');
   },
-  /** @return {!string} The type of return value for the block, an integer. */
+  /** @return {!string} The type of return value for the block, an analog pin */
   getBlockType: function() {
-    return Blockly.Types.NUMBER;
+    return Blockly.Types.ANAPIN;
   },
   /**
    * Updates the content of the the pin related fields.
@@ -75,9 +75,9 @@ Blockly.Blocks['io_pin_pwm'] = {
     this.setTooltip(Blockly.Msg.ARD_PIN_PWM_TIP);
     this.setHelpUrl('https://www.arduino.cc/en/Reference/Board');
   },
-  /** @return {!string} The type of return value for the block, an integer. */
+  /** @return {!string} The type of return value for the block, a PWM pin. */
   getBlockType: function() {
-    return Blockly.Types.NUMBER;
+    return Blockly.Types.PWMPIN;
   },
   /**
    * Updates the content of the the pin related fields.
