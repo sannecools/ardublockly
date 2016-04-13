@@ -454,7 +454,7 @@ Blockly.Arduino.getArduinoType_ = function(typeBlockly) {
     case Blockly.Types.ANAPIN.typeId:
       // a pin type
       return 'int';
-    case Blockly.Types.PWMPIN.typeId:
+    case Blockly.Types.PWNPIN.typeId:
       // a pin type
       return 'int';
     default:
