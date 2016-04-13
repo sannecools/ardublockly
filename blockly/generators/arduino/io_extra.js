@@ -15,6 +15,19 @@ goog.require('Blockly.Arduino');
 
 
 /**
+ * Function for assigning a variable a specific pin.
+ * Arduino code: setup { pinMode(X, OUTPUT); }
+ * @param {!Blockly.Block} block Block to generate the code from.
+ * @return {string} Completed code.
+ */
+Blockly.Arduino['io_pin_dig'] = function(block) {
+  var pin = block.getFieldValue('PIN');
+
+  var code = pin;
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
+
+/**
  * Function for 'set pin' (X) to a state (Y).
  * Arduino code: setup { pinMode(X, OUTPUT); }
  *               loop  { digitalWrite(X, Y); }
