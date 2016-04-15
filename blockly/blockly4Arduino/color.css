@@ -64,19 +64,19 @@ div>span.blocklyTreeIcon.blocklyTreeIconNone{
 	background-size: 100% auto; 
 }
 #\:3>div>span.blocklyTreeIcon.blocklyTreeIconNone{ 
-	background:url('../media/mark/factory.png') no-repeat;
+	background:url('../media/mark/func.png') no-repeat;
 	background-size: 100% auto; 
 }
 #\:3>.blocklyTreeSelected>span.blocklyTreeIcon.blocklyTreeIconNone{ 
-	background:url('../media/mark/factory2.png') no-repeat;
+	background:url('../media/mark/func2.png') no-repeat;
 	background-size: 100% auto; 
 }
 #\:5>div>span.blocklyTreeIcon.blocklyTreeIconNone{ 
-	background:url('../media/mark/ctrl.png') no-repeat;
+	background:url('../media/mark/repeat.png') no-repeat;
 	background-size: 100% auto; 
 }
 #\:5>.blocklyTreeSelected>span.blocklyTreeIcon.blocklyTreeIconNone{ 
-	background:url('../media/mark/ctrl2.png') no-repeat;
+	background:url('../media/mark/repeat2.png') no-repeat;
 	background-size: 100% auto; 
 }
 #\:7>div>span.blocklyTreeIcon.blocklyTreeIconNone{ 
@@ -112,19 +112,19 @@ div>span.blocklyTreeIcon.blocklyTreeIconNone{
 	background-size: 100% auto; 
 }
 #\:f>div>span.blocklyTreeIcon.blocklyTreeIconNone{ 
-	background:url('../media/mark/factory.png') no-repeat;
+	background:url('../media/mark/time.png') no-repeat;
 	background-size: 100% auto; 
 }
 #\:f>.blocklyTreeSelected>span.blocklyTreeIcon.blocklyTreeIconNone{ 
-	background:url('../media/mark/factory2.png') no-repeat;
+	background:url('../media/mark/time2.png') no-repeat;
 	background-size: 100% auto; 
 }
 #\:h>div>span.blocklyTreeIcon.blocklyTreeIconNone{ 
-	background:url('../media/mark/sensor3.png') no-repeat;
+	background:url('../media/mark/music.png') no-repeat;
 	background-size: 100% auto; 
 }
 #\:h>.blocklyTreeSelected>span.blocklyTreeIcon.blocklyTreeIconNone{ 
-	background:url('../media/mark/sensor4.png') no-repeat;
+	background:url('../media/mark/music2.png') no-repeat;
 	background-size: 100% auto; 
 }
 #\:j>div>span.blocklyTreeIcon.blocklyTreeIconNone{ 
