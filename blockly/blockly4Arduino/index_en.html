@@ -61,6 +61,8 @@
   <link rel="stylesheet" href="../libs/bootstrap/css/bootstrap.min.css">
   <script src="../libs/jquery/jquery-1.12.2.min.js"></script>
   <script src="../libs/bootstrap/js/bootstrap.min.js"></script>
+  
+  <link rel="stylesheet" type="text/css" href="color.css" />
 
   <script>
 
@@ -446,9 +448,7 @@ function init() {
       </value>
     </block>
   </category>
-  <sep></sep>
   <category id="catFunctions" name="Functions" custom="PROCEDURE"></category>
-  <sep></sep>
   <category id="catLoops" name="Repeat">
     <block type="controls_repeat_ext">
       <value name="TIMES">
@@ -477,7 +477,6 @@ function init() {
     </block>
     <block type="controls_flow_statements"></block>
   </category>
-  <sep></sep>
   <category id="catLogic" name="Logic">
     <block type="controls_if"></block>
     <block type="logic_compare"></block>
@@ -487,7 +486,6 @@ function init() {
     <block type="logic_null"></block>
     <block type="logic_ternary"></block>
   </category>
-  <sep></sep>
   <category id="catMath" name="Math">
     <block type="math_number"></block>
     <block type="math_arithmetic"></block>
@@ -531,7 +529,6 @@ function init() {
     <block type="math_random_float"></block>
     <block type="base_map"></block>
   </category>
-  <sep></sep>
   <category id="catText" name="Text">
     <block type="text"></block>
     <block type="text_join"></block>
@@ -545,7 +542,6 @@ function init() {
 //    <!--block type="text_trim"></block Need to update block -->
 //    <!--block type="text_print"></block Part of the serial comms -->
   </category>
-  <sep></sep>
   <category id="catVariables" name="Variables">
     <block type="variables_get"></block>
     <block type="variables_set"></block>
@@ -556,7 +552,6 @@ function init() {
     </block>
     <block type="variables_set_type"></block>
   </category>
-  <sep></sep>
   <category id="catTime" name="Time">
     <block type="time_delay">
       <value name="DELAY_TIME_MILI">
@@ -588,7 +583,6 @@ function init() {
     </block>
     <block type="io_notone"></block>
   </category>
-  <sep></sep>
   <category id="catMotors" name="Motors">
     <block type="servo_write">
       <value name="SERVO_ANGLE">
@@ -620,7 +614,6 @@ function init() {
       </value>
     </block>
   </category>
-  <sep></sep>
   <category id="catComms" name="Comms">
     <block type="serial_setup"></block>
     <block type="serial_print"></block>
@@ -633,6 +626,14 @@ function init() {
     <block type="spi_transfer"></block>
     <block type="spi_transfer_return"></block>
   </category>
+  <sep></sep>
+  <category id="catExp" name="Expansions">
+    <category id="catMD" name="MicroDuino">
+    </category>
+    <category id="catMD" name="AllBot">
+    </category>
+  </category>
+  
 </xml>;
   
 </body>

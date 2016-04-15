@@ -376,6 +376,17 @@ function init() {
                 <button type="button" class="btn btn-info btn-sm" onclick="saveCode()">Code Opslaan</button>
                 <button type="button" class="btn btn-info btn-sm" onclick="save()">XML Opslaan</button>
                 <button type="button" class="btn btn-info btn-sm" id="fakeload">XML Laden</button>
+                
+                <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" id="setMenu">Settings
+                  <span class="caret"></span></button>
+                  <ul class="dropdown-menu">
+                    <li class="dropdown-header">Arduino</li>
+                    <li><a href="#" id="action-setUno">Uno</a></li>
+                    <li><a href="#" id="action-setMega">Mega</a></li>
+                    <li class="dropdown-header">Kits</li>
+                    <li><a href="#" id="action-setMD">MicroDuino</a></li>
+                  </ul>
+                  
                 <input type="file" id="load" style="display: none;"/>
                 <!--button class="launch" onclick="runJS()">Run Program</button-->
               </div>
@@ -448,9 +459,7 @@ function init() {
       </value>
     </block>
   </category>
-  <sep></sep>
   <category id="catFunctions" name="Functies" custom="PROCEDURE"></category>
-  <sep></sep>
   <category id="catLoops" name="Herhalen">
     <block type="controls_repeat_ext">
       <value name="TIMES">
@@ -479,7 +488,6 @@ function init() {
     </block>
     <block type="controls_flow_statements"></block>
   </category>
-  <sep></sep>
   <category id="catLogic" name="Logica">
     <block type="controls_if"></block>
     <block type="logic_compare"></block>
@@ -489,7 +497,6 @@ function init() {
     <block type="logic_null"></block>
     <block type="logic_ternary"></block>
   </category>
-  <sep></sep>
   <category id="catMath" name="Wiskunde">
     <block type="math_number"></block>
     <block type="math_arithmetic"></block>
@@ -533,7 +540,6 @@ function init() {
     <block type="math_random_float"></block>
     <block type="base_map"></block>
   </category>
-  <sep></sep>
   <category id="catText" name="Tekst">
     <block type="text"></block>
     <block type="text_join"></block>
@@ -547,7 +553,6 @@ function init() {
 //    <!--block type="text_trim"></block Need to update block -->
 //    <!--block type="text_print"></block Part of the serial comms -->
   </category>
-  <sep></sep>
   <category id="catVariables" name="Variabelen">
     <block type="variables_get"></block>
     <block type="variables_set"></block>
@@ -558,7 +563,6 @@ function init() {
     </block>
     <block type="variables_set_type"></block>
   </category>
-  <sep></sep>
   <category id="catTime" name="Tijd">
     <block type="time_delay">
       <value name="DELAY_TIME_MILI">
@@ -590,7 +594,6 @@ function init() {
     </block>
     <block type="io_notone"></block>
   </category>
-  <sep></sep>
   <category id="catMotors" name="Motoren">
     <block type="servo_write">
       <value name="SERVO_ANGLE">
@@ -622,7 +625,6 @@ function init() {
       </value>
     </block>
   </category>
-  <sep></sep>
   <category id="catComms" name="Comms">
     <block type="serial_setup"></block>
     <block type="serial_print"></block>
@@ -635,7 +637,29 @@ function init() {
     <block type="spi_transfer"></block>
     <block type="spi_transfer_return"></block>
   </category>
+  <sep></sep>
+  <category id="catExp" name="Expansions">
+    <category id="catMD" name="MicroDuino">
+    </category>
+    <category id="catMD" name="AllBot">
+    </category>
+  </category>
 </xml>;
 
 </body>
 </html>
+
+  <script>
+jQuery("#action-setUno").click(function(event){
+  //do something
+  setBoard("uno");
+  });
+jQuery("#action-setMega").click(function(event){
+  //do something
+  setBoard("mega");
+  });
+jQuery("#action-setMD").click(function(event){
+  //do something
+  setBoard("microduino");
+  });
+  </script>
