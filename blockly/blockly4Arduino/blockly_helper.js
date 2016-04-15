@@ -126,15 +126,6 @@ function auto_save_and_restore_blocks() {
   };
 }
 
-/*
- * Change the board 
- */
-function setBoard(name) {
-  console.log('setboard', name);
-  if (name === "Uno") {
-    Blockly.Arduino.Boards.changeBoard(Blockly.mainWorkspace, name);
-  }
-}
 
 /**
  * Bind an event to a function call.
@@ -287,3 +278,5 @@ function resetClick() {
         }
     });
 }
+
+// 

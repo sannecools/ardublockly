@@ -357,7 +357,7 @@ function init() {
             <td class="tabmax">
               <div class="dropdown">
               <div class="btn-group">
-                <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-toggle="dropdown">Examples
+                <button class="btn btn-primary btn-md dropdown-toggle" type="button" data-toggle="dropdown">Examples
                   <span class="caret"></span></button>
                   <ul class="dropdown-menu">
                     <li class="dropdown-header">Basic Examples</li>
@@ -371,13 +371,46 @@ function init() {
                     <li><a href="index_en.html?url=examples/LedUpKidz_03_versnellen_en.xml">03: Faster and faster</a></li>
                     <li><a href="index_en.html?url=examples/LedUpKidz_04_combineren_en.xml">04: Combining Effects</a></li>
                   </ul>
-                <button type="button" class="btn btn-default btn-sm" onclick="uploadClick()">Upload</button>
-                <button type="button" class="btn btn-warning btn-sm" onclick="discard()">Discard</button>
-                <button type="button" class="btn btn-info btn-sm" onclick="saveCode()">Save Code</button>
-                <button type="button" class="btn btn-info btn-sm" onclick="save()">Save XML</button>
-                <button type="button" class="btn btn-info btn-sm" id="fakeload">Load XML</button>
+                <button type="button" class="btn btn-default btn-md" onclick="uploadClick()">
+                  <a class="b4ard_tt" title="" data-placement="top" data-toggle="tooltip" href="#" data-original-title="Upload">
+                    <span class="glyphicon glyphicon-play-circle"></span>
+                  </a>
+                </button>
+                <button type="button" class="btn btn-warning btn-md" onclick="discard()">
+                   <a class="b4ard_tt" title="" data-placement="top" data-toggle="tooltip" href="#" data-original-title="Discard">
+                     <span class="glyphicon glyphicon-trash"></span>
+                    </a>
+                </button>
+                <button type="button" class="btn btn-info btn-md" onclick="saveCode()">
+                   <a class="b4ard_tt" title="" data-placement="top" data-toggle="tooltip" href="#" data-original-title="Save Code">
+                    <span class="glyphicon glyphicon-floppy-save"></span>
+                  </a>
+                </button>
+                <button type="button" class="btn btn-info btn-md" onclick="save()">
+                  <a class="b4ard_tt" title="" data-placement="top" data-toggle="tooltip" href="#" data-original-title="Save XML">
+                    <span class="glyphicon glyphicon-save"></span>
+                  </a>
+                </button>
+                <button type="button" class="btn btn-info btn-md" id="fakeload">
+                   <a class="b4ard_tt" title="" data-placement="top" data-toggle="tooltip" href="#" data-original-title="Load XML">
+                    <span class="glyphicon glyphicon-open"></span>
+                  </a>
+                </button>
+
+                
                 <input type="file" id="load" style="display: none;"/>
                 <!--button class="launch" onclick="runJS()">Run Program</button-->
+              </div>
+              <div class="btn-group">
+                <button class="btn btn-primary btn-md dropdown-toggle" type="button" data-toggle="dropdown" id="setMenu">Settings
+                  <span class="caret"></span></button>
+                  <ul class="dropdown-menu">
+                    <li class="dropdown-header">Arduino</li>
+                    <li><a href="#" id="action-setUno">Uno</a></li>
+                    <li><a href="#" id="action-setMega">Mega</a></li>
+                    <li class="dropdown-header">Kits</li>
+                    <li><a href="#" id="action-setMD">MicroDuino</a></li>
+                  </ul>
               </div>
               </div>
             </td>
@@ -638,3 +671,5 @@ function init() {
   
 </body>
 </html>
+
+<script type="text/javascript" src="blockly_helper_after.js"></script>
