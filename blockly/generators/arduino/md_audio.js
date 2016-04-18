@@ -19,9 +19,10 @@ goog.require('Blockly.Arduino');
  * @return {string} Completed code.
  */
 Blockly.Arduino['mcookie_audio_play'] = function(block) {
+  var audioInstanceName = block.getFieldValue('AUDIONAME');
   var code = '//Speel een specifiek geluidsbestand af, de bestanden moeten in map "1" gezet worden\n' +
-  '  AUDIO.chooseFile(1, AUDIONAME);\n' +
-  '  AUDIO.play();';
+  '  AUDIO.chooseFile(1, ' + audioInstanceName + ');\n' +
+  '  AUDIO.play();\n';
   return code;
 };
 
@@ -31,7 +32,7 @@ Blockly.Arduino['mcookie_audio_play'] = function(block) {
  * @return {string} Completed code.
  */
 Blockly.Arduino['mcookie_audio_pause'] = function(block) {
-  var code = '  AUDIO.pause();';
+  var code = '  AUDIO.pause();\n';
   return code;
 };
 
