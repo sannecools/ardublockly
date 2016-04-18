@@ -1,7 +1,7 @@
 {
 	"@metadata": {
 		"author": "Ellen Spertus <ellen.spertus@gmail.com>",
-		"lastupdated": "2016-04-18 16:20:14.593947",
+		"lastupdated": "2016-04-18 16:28:58.169197",
 		"locale": "en",
 		"messagedocumentation" : "qqq"
 	},
@@ -508,12 +508,12 @@
 	"ARD_MD_NOSERVO": "Geen Servo gekoppeld",
 	"ARD_MD_180SERVO": "0~180 graden Servo",
 	"ARD_MD_360SERVO": "0~360 graden Servo",
-	"ARD_MD_SERVOTYPE_TIP": "Selecteer het type Servo die je koppelt aan de Servo connnector",
+	"ARD_MD_SERVOTYPE_TIP": "Select the type of Servo you attach to the Servo connnector",
 	"ARD_MD_SERVOCON": "Servo Motor Connector.",
-	"ARD_MD_SERVOCON_TOP": "Defineer boven:",
-	"ARD_MD_SERVOCON_BOTTOM": "Defineer onder:",
+	"ARD_MD_SERVOCON_TOP": "Define top Servo",
+	"ARD_MD_SERVOCON_BOTTOM": "Define bottom Servo",
 	"ARD_MD_SERVOCON_TYPE": "Type:",
-	"ARD_MD_SERVOCON_TIP": "Servo Motor Connector, kan twee servo sturen (boven en onder). Een servo dien je een naam te geven, en het type op te geven (geen servo, 180 graden servo of 360 graden servo)",
+	"ARD_MD_SERVOCON_TIP": "Servo Motor Connector, can control two Servo (top and bottom). You have to give the servo a name, and what type it is (no servo attached, a 180 degree servo or a 360 degree servo.",
 	"ARD_MD_SERVO_STEP_WARN1": "A Servo configuration block must be added to the hub to use this block!",
 	"ARD_MD_SERVO_STEP_WARN2": "A Name input must be added to the Servo configuration block!",
 	"ARD_MD_SERVO_STEP_WARN3": "Selected servo does not exist any more, please select a new one.",
