@@ -41,8 +41,8 @@ Blockly.Blocks['declare_var_bool'] = {
         .appendField(Blockly.Msg.ARD_AS_BOOL_NUMBER)
         .setCheck(Blockly.Types.BOOLEAN.check);
     this.setInputsInline(false);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
+    this.setPreviousStatement(true, 'ARD_BLOCK');
+    this.setNextStatement(true, 'ARD_BLOCK');
     this.setTooltip(Blockly.Msg.ARD_AS_BOOL_NUMBER_TIP);
   },
   /**
@@ -86,8 +86,8 @@ Blockly.Blocks['declare_var_int'] = {
         .appendField(Blockly.Msg.ARD_AS_INTEGER_NUMBER)
         .setCheck(Blockly.Types.NUMBER.checkList);
     this.setInputsInline(false);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
+    this.setPreviousStatement(true, 'ARD_BLOCK');
+    this.setNextStatement(true, 'ARD_BLOCK');
     this.setTooltip(Blockly.Msg.ARD_AS_INTEGER_NUMBER_TIP);
   },
   /**
@@ -131,8 +131,8 @@ Blockly.Blocks['declare_var_float'] = {
         .appendField(Blockly.Msg.ARD_AS_FLOAT_NUMBER)
         .setCheck(Blockly.Types.NUMBER.checkList);
     this.setInputsInline(false);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
+    this.setPreviousStatement(true, 'ARD_BLOCK');
+    this.setNextStatement(true, 'ARD_BLOCK');
     this.setTooltip(Blockly.Msg.ARD_AS_FLOAT_NUMBER_TIP);
   },
   /**
@@ -176,8 +176,8 @@ Blockly.Blocks['declare_var_long'] = {
         .appendField(Blockly.Msg.ARD_AS_LONG_NUMBER)
         .setCheck(Blockly.Types.NUMBER.checkList);
     this.setInputsInline(false);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
+    this.setPreviousStatement(true, 'ARD_BLOCK');
+    this.setNextStatement(true, 'ARD_BLOCK');
     this.setTooltip(Blockly.Msg.ARD_AS_LONG_NUMBER_TIP);
   },
   /**
@@ -221,8 +221,8 @@ Blockly.Blocks['declare_var_uint'] = {
         .appendField(Blockly.Msg.ARD_AS_UINT_NUMBER)
         .setCheck(Blockly.Types.NUMBER.checkList);
     this.setInputsInline(false);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
+    this.setPreviousStatement(true, 'ARD_BLOCK');
+    this.setNextStatement(true, 'ARD_BLOCK');
     this.setTooltip(Blockly.Msg.ARD_AS_UINT_NUMBER_TIP);
   },
   /**
@@ -266,8 +266,8 @@ Blockly.Blocks['declare_var_ulong'] = {
         .appendField(Blockly.Msg.ARD_AS_ULONG_NUMBER)
         .setCheck(Blockly.Types.NUMBER.checkList);
     this.setInputsInline(false);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
+    this.setPreviousStatement(true, 'ARD_BLOCK');
+    this.setNextStatement(true, 'ARD_BLOCK');
     this.setTooltip(Blockly.Msg.ARD_AS_ULONG_NUMBER_TIP);
   },
   /**
@@ -312,8 +312,8 @@ Blockly.Blocks['declare_var_digin'] = {
         .appendField(new Blockly.FieldDropdown(
             Blockly.Arduino.Boards.selected.digitalPins), 'PIN')
     this.setInputsInline(false);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
+    this.setPreviousStatement(true, 'ARD_BLOCK');
+    this.setNextStatement(true, 'ARD_BLOCK');
     this.setTooltip(Blockly.Msg.ARD_AS_DIGINPUT_PIN_TIP);
   },
   /**
@@ -358,8 +358,8 @@ Blockly.Blocks['declare_var_digout'] = {
         .appendField(new Blockly.FieldDropdown(
             Blockly.Arduino.Boards.selected.digitalPins), 'PIN')
     this.setInputsInline(false);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
+    this.setPreviousStatement(true, 'ARD_BLOCK');
+    this.setNextStatement(true, 'ARD_BLOCK');
     this.setTooltip(Blockly.Msg.ARD_AS_DIGOUTPUT_PIN_TIP);
   },
   /**
@@ -404,8 +404,8 @@ Blockly.Blocks['declare_var_anain'] = {
         .appendField(new Blockly.FieldDropdown(
             Blockly.Arduino.Boards.selected.analogPins), 'PIN')
     this.setInputsInline(false);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
+    this.setPreviousStatement(true, 'ARD_BLOCK');
+    this.setNextStatement(true, 'ARD_BLOCK');
     this.setTooltip(Blockly.Msg.ARD_AS_ANAINPUT_PIN_TIP);
   },
   /**
@@ -450,8 +450,8 @@ Blockly.Blocks['declare_var_anaout'] = {
         .appendField(new Blockly.FieldDropdown(
             Blockly.Arduino.Boards.selected.pwmPins), 'PIN')
     this.setInputsInline(false);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
+    this.setPreviousStatement(true, 'ARD_BLOCK');
+    this.setNextStatement(true, 'ARD_BLOCK');
     this.setTooltip(Blockly.Msg.ARD_AS_ANAOUTPUT_PIN_TIP);
   },
   /**

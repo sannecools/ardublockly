@@ -103,8 +103,8 @@ Blockly.Blocks['io_digitalwrite_var'] = {
         .appendField(Blockly.Msg.ARD_WRITE_TO)
         .setCheck(Blockly.Types.BOOLEAN.check);
     this.setInputsInline(false);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
+    this.setPreviousStatement(true, 'ARD_BLOCK');
+    this.setNextStatement(true, 'ARD_BLOCK');
     this.setTooltip(Blockly.Msg.ARD_DIGITALWRITEVAR_TIP);
   },
   /**
@@ -201,8 +201,8 @@ Blockly.Blocks['io_analogwrite_var'] = {
         .appendField(Blockly.Msg.ARD_WRITE_TO)
         .setCheck(Blockly.Types.NUMBER.output);
     this.setInputsInline(false);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
+    this.setPreviousStatement(true, 'ARD_BLOCK');
+    this.setNextStatement(true, 'ARD_BLOCK');
     this.setTooltip(Blockly.Msg.ARD_ANALOGWRITE_TIP);
   },
   /** @return {!string} The type of input value for the block, an integer. */
