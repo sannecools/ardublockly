@@ -506,10 +506,13 @@
 	"ARD_MD_360SERVO": "0~360 graden Servo",
 	"ARD_MD_SERVOTYPE_TIP": "Selecteer het type Servo die je koppelt aan de Servo connnector",
 	"ARD_MD_SERVOCON": "Servo Motor Connector.",
-	"ARD_MD_SERVOCON_TOP": "Defineer boven:",
-	"ARD_MD_SERVOCON_BOTTOM": "Defineer onder:",
+	"ARD_MD_SERVOCON_TOP": "Defineer boven Servo",
+	"ARD_MD_SERVOCON_BOTTOM": "Defineer onder Servo",
 	"ARD_MD_SERVOCON_TYPE": "Type:",
 	"ARD_MD_SERVOCON_TIP": "Servo Motor Connector, kan twee servo sturen (boven en onder). Een servo dien je een naam te geven, en het type op te geven (geen servo, 180 graden servo of 360 graden servo)",
-	"ARD_MD_SERVO_WRITE": "positioneer 180 graden Servo ",
+	"ARD_MD_SERVO_STEP_WARN1": "Een Servo configuratie blok moet aanwezig zijn in de Microduino hub om dit blok te kunnen gebruiken!",
+	"ARD_MD_SERVO_STEP_WARN2": "Een Naam moet toegekend worden aan de Servo in het Servo configuratie blok!",
+	"ARD_MD_SERVO_STEP_WARN3": "De Geselecteerde Servo bestaat niet meer, kies aub een andere.",
+	"ARD_MD_SERVO_WRITE": "Positioneer 180 graden Servo ",
 	"ARD_MD_SERVO_READ": "lees Servo "
 }
