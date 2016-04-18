@@ -18,9 +18,13 @@ jQuery("#action-setMega").click(function(event){
   //do something
   setBoard("mega");
   });
-jQuery("#action-setMD").click(function(event){
+jQuery("#action-setMDCore32U4").click(function(event){
   //do something
-  setBoard("microduino");
+  setBoard("mdcore32u4");
+  });
+jQuery("#action-setMDCookieCoreUSB").click(function(event){
+  //do something
+  setBoard("mdcookiecoreusb");
   });
 
 /* 

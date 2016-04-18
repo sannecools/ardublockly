@@ -166,6 +166,56 @@ Blockly.Arduino.Boards.profiles.leonardo = {
 /** Arduino Yun board profile is identical to Leonardo. */
 Blockly.Arduino.Boards.profiles.yun = Blockly.Arduino.Boards.profiles.leonardo;
 
+/** Microduino CoreUSB 32U4 board profile.
+ *  https://wiki.microduino.cc/index.php/Microduino-CoreUSB
+ */
+Blockly.Arduino.Boards.profiles.mdcore32u4 = {
+  name: 'Microduino CoreUSB 32U4',
+  description: 'Microduino CoreUSB 32U4 board',
+  analogPins: Blockly.Arduino.Boards.generateAnalogIo(0, 3).concat(
+                  Blockly.Arduino.Boards.generateAnalogIo(6, 11)),
+  digitalPins: Blockly.Arduino.Boards.generateDigitalIo(0, 21),
+  pwmPins: Blockly.Arduino.Boards.generateDigitalIo(3, 11),
+  serial: Blockly.Arduino.Boards.profiles.leonardo.serial,
+  serialPins: Blockly.Arduino.Boards.profiles.leonardo.serialPins,
+  serialSpeed: Blockly.Arduino.Boards.profiles.leonardo.serialSpeed,
+  spi: [['SPI', 'SPI']],
+  spiPins: { SPI: [['MOSI', '11'], ['MISO', '12'], ['SCK', '13']] },
+  //TODO: confirm the clock divides are the same for the Leonardo and UNO
+  spiClockDivide: Blockly.Arduino.Boards.profiles.leonardo.spiClockDivide,
+  i2c: [['I2C', 'Wire']],
+  i2cPins: { Wire: [['SDA', '18'], ['SCL', '19']] },
+  i2cSpeed: Blockly.Arduino.Boards.profiles.leonardo.i2cSpeed,
+  builtinLed: Blockly.Arduino.Boards.profiles.leonardo.builtinLed,
+  interrupt: [['interrupt0', '19'], ['interrupt1', '18'], ['interrupt2', '0'],
+              ['interrupt3', '1'], ['interrupt4', '2']]
+};
+
+/** Microduino CoreUSB 32U4 board profile.
+ *  https://wiki.microduino.cc/index.php/MCookie-CoreUSB
+ */
+Blockly.Arduino.Boards.profiles.mdcookiecoreusb = {
+  name: 'MCookie-CoreUSB',
+  description: 'Microduino MCookie-CoreUSB board',
+  analogPins: Blockly.Arduino.Boards.generateAnalogIo(0, 3).concat(
+                  Blockly.Arduino.Boards.generateAnalogIo(6, 11)),
+  digitalPins: Blockly.Arduino.Boards.generateDigitalIo(0, 21),
+  pwmPins: Blockly.Arduino.Boards.generateDigitalIo(3, 9).concat([['19', '19']]),
+  serial: Blockly.Arduino.Boards.profiles.leonardo.serial,
+  serialPins: Blockly.Arduino.Boards.profiles.leonardo.serialPins,
+  serialSpeed: Blockly.Arduino.Boards.profiles.leonardo.serialSpeed,
+  spi: [['SPI', 'SPI']],
+  spiPins: { SPI: [['MOSI', '11'], ['MISO', '12'], ['SCK', '13']] },
+  //TODO: confirm the clock divides are the same for the Leonardo and UNO
+  spiClockDivide: Blockly.Arduino.Boards.profiles.leonardo.spiClockDivide,
+  i2c: [['I2C', 'Wire']],
+  i2cPins: { Wire: [['SDA', '18'], ['SCL', '19']] },
+  i2cSpeed: Blockly.Arduino.Boards.profiles.leonardo.i2cSpeed,
+  builtinLed: Blockly.Arduino.Boards.profiles.leonardo.builtinLed,
+  interrupt: [['interrupt0', '19'], ['interrupt1', '18'], ['interrupt2', '0'],
+              ['interrupt3', '1'], ['interrupt4', '2']]
+};
+
 /** Set default profile to Arduino standard-compatible board */
 Blockly.Arduino.Boards.selected = Blockly.Arduino.Boards.profiles.uno;
 
