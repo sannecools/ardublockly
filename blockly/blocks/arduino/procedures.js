@@ -24,10 +24,12 @@ Blockly.Blocks['arduino_functions'] = {
   init: function() {
     this.appendDummyInput()
         .appendField(Blockly.Msg.ARD_FUN_RUN_SETUP);
-    this.appendStatementInput('SETUP_FUNC');
+    this.appendStatementInput('SETUP_FUNC')
+        .setCheck('ARD_BLOCK');
     this.appendDummyInput()
         .appendField(Blockly.Msg.ARD_FUN_RUN_LOOP);
-    this.appendStatementInput('LOOP_FUNC');
+    this.appendStatementInput('LOOP_FUNC')
+        .setCheck('ARD_BLOCK');
     this.setInputsInline(false);
     this.setColour(Blockly.Blocks.procedures.HUE);
     this.setTooltip(Blockly.Msg.ARD_FUN_RUN_TIP);
@@ -49,13 +51,16 @@ Blockly.Blocks['arduino_functions_ext'] = {
   init: function() {
     this.appendDummyInput()
         .appendField(Blockly.Msg.ARD_FUN_RUN_DECL);
-    this.appendStatementInput('DECLARE_FUNC');
+    this.appendStatementInput('DECLARE_FUNC')
+        .setCheck('SET_VAR');
     this.appendDummyInput()
         .appendField(Blockly.Msg.ARD_FUN_RUN_SETUP);
-    this.appendStatementInput('SETUP_FUNC');
+    this.appendStatementInput('SETUP_FUNC')
+        .setCheck('ARD_BLOCK');
     this.appendDummyInput()
         .appendField(Blockly.Msg.ARD_FUN_RUN_LOOP);
-    this.appendStatementInput('LOOP_FUNC');
+    this.appendStatementInput('LOOP_FUNC')
+        .setCheck('ARD_BLOCK');
     this.setInputsInline(false);
     this.setColour(Blockly.Blocks.procedures.HUE);
     this.setTooltip(Blockly.Msg.ARD_FUN_RUN_TIP);

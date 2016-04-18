@@ -81,8 +81,8 @@ Blockly.Blocks['serial_print'] = {
         .appendField(new Blockly.FieldCheckbox('TRUE'), 'NEW_LINE')
         .appendField(Blockly.Msg.ARD_SERIAL_PRINT_NEWLINE);
     this.setInputsInline(true);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
+    this.setPreviousStatement(true, 'ARD_BLOCK');
+    this.setNextStatement(true, 'ARD_BLOCK');
     this.setTooltip(Blockly.Msg.ARD_SERIAL_PRINT_TIP);
   },
   /**

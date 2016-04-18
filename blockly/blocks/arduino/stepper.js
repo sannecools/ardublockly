@@ -159,8 +159,8 @@ Blockly.Blocks['stepper_step'] = {
         .setCheck(Blockly.Types.NUMBER.checkList);
     this.appendDummyInput()
         .appendField(Blockly.Msg.ARD_STEPPER_STEPS);
-    this.setPreviousStatement(true);
-    this.setNextStatement(true);
+    this.setPreviousStatement(true, 'ARD_BLOCK');
+    this.setNextStatement(true, 'ARD_BLOCK');
     this.setTooltip(Blockly.Msg.ARD_STEPPER_STEP_TIP);
   },
   /**

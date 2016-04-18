@@ -50,8 +50,8 @@ Blockly.Blocks['controls_repeat_ext'] = {
           "check": Blockly.Types.NUMBER.checkList
         }
       ],
-      "previousStatement": null,
-      "nextStatement": null,
+      "previousStatement": 'ARD_BLOCK',
+      "nextStatement": 'ARD_BLOCK',
       "colour": Blockly.Blocks.loops.HUE,
       "tooltip": Blockly.Msg.CONTROLS_REPEAT_TOOLTIP,
       "helpUrl": Blockly.Msg.CONTROLS_REPEAT_HELPURL
@@ -78,8 +78,8 @@ Blockly.Blocks['controls_repeat'] = {
           "text": "10"
         }
       ],
-      "previousStatement": null,
-      "nextStatement": null,
+      "previousStatement": 'ARD_BLOCK',
+      "nextStatement": 'ARD_BLOCK',
       "colour": Blockly.Blocks.loops.HUE,
       "tooltip": Blockly.Msg.CONTROLS_REPEAT_TOOLTIP,
       "helpUrl": Blockly.Msg.CONTROLS_REPEAT_HELPURL
@@ -107,8 +107,8 @@ Blockly.Blocks['controls_whileUntil'] = {
         .appendField(new Blockly.FieldDropdown(OPERATORS), 'MODE');
     this.appendStatementInput('DO')
         .appendField(Blockly.Msg.CONTROLS_WHILEUNTIL_INPUT_DO);
-    this.setPreviousStatement(true);
-    this.setNextStatement(true);
+    this.setPreviousStatement(true, 'ARD_BLOCK');
+    this.setNextStatement(true, 'ARD_BLOCK');
     // Assign 'this' to a variable for use in the tooltip closure below.
     var thisBlock = this;
     this.setTooltip(function() {
@@ -156,8 +156,8 @@ Blockly.Blocks['controls_for'] = {
         }
       ],
       "inputsInline": true,
-      "previousStatement": null,
-      "nextStatement": null,
+      "previousStatement": 'ARD_BLOCK',
+      "nextStatement": 'ARD_BLOCK',
       "colour": Blockly.Blocks.loops.HUE,
       "helpUrl": Blockly.Msg.CONTROLS_FOR_HELPURL
     });
@@ -238,8 +238,8 @@ Blockly.Blocks['controls_forEach'] = {
           "check": Blockly.Types.ARRAY.checkList
         }
       ],
-      "previousStatement": null,
-      "nextStatement": null,
+      "previousStatement": 'ARD_BLOCK',
+      "nextStatement": 'ARD_BLOCK',
       "colour": Blockly.Blocks.loops.HUE,
       "helpUrl": Blockly.Msg.CONTROLS_FOREACH_HELPURL
     });

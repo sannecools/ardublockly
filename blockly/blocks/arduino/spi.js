@@ -100,8 +100,8 @@ Blockly.Blocks['spi_transfer'] = {
         .appendField(
             new Blockly.FieldDropdown(digitalPinsExtended), 'SPI_SS');
     this.setInputsInline(true);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
+    this.setPreviousStatement(true, 'ARD_BLOCK');
+    this.setNextStatement(true, 'ARD_BLOCK');
     this.setTooltip(Blockly.Msg.ARD_SPI_TRANS_TIP);
   },
   /**

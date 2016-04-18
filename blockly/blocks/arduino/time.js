@@ -33,8 +33,8 @@ Blockly.Blocks['time_delay'] = {
     this.appendDummyInput()
         .appendField(Blockly.Msg.ARD_TIME_MS);
     this.setInputsInline(true);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
+    this.setPreviousStatement(true, 'ARD_BLOCK');
+    this.setNextStatement(true, 'ARD_BLOCK');
     this.setTooltip(Blockly.Msg.ARD_TIME_DELAY_TIP);
   }
 };
@@ -53,8 +53,8 @@ Blockly.Blocks['time_delaymicros'] = {
     this.appendDummyInput()
         .appendField(Blockly.Msg.ARD_TIME_DELAY_MICROS);
     this.setInputsInline(true);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
+    this.setPreviousStatement(true, 'ARD_BLOCK');
+    this.setNextStatement(true, 'ARD_BLOCK');
     this.setTooltip(Blockly.Msg.ARD_TIME_DELAY_MICRO_TIP);
   }
 };
@@ -111,7 +111,7 @@ Blockly.Blocks['infinite_loop'] = {
     this.appendDummyInput()
         .appendField(Blockly.Msg.ARD_TIME_INF);
     this.setInputsInline(true);
-    this.setPreviousStatement(true);
+    this.setPreviousStatement(true, 'ARD_BLOCK');
     this.setTooltip(Blockly.Msg.ARD_TIME_INF_TIP);
   }
 };

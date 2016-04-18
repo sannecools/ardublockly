@@ -125,8 +125,8 @@ Blockly.Blocks['variables_set'] = {
           "name": "VALUE"
         }
       ],
-      "previousStatement": null,
-      "nextStatement": null,
+      "previousStatement": ['ARD_BLOCK','SET_VAR'],
+      "nextStatement":  ['ARD_BLOCK','SET_VAR'],
       "colour": Blockly.Blocks.variables.HUE,
       "tooltip": Blockly.Msg.VARIABLES_SET_TOOLTIP,
       "helpUrl": Blockly.Msg.VARIABLES_SET_HELPURL

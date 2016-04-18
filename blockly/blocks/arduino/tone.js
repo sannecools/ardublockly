@@ -29,8 +29,8 @@ Blockly.Blocks['io_tone'] = {
         .setCheck(Blockly.Types.NUMBER.checkList)
         .appendField(Blockly.Msg.ARD_TONEFREQ);
     this.setInputsInline(true);
-    this.setPreviousStatement(true);
-    this.setNextStatement(true);
+    this.setPreviousStatement(true, 'ARD_BLOCK');
+    this.setNextStatement(true, 'ARD_BLOCK');
     this.setColour(Blockly.Blocks.tone.HUE);
     this.setTooltip(Blockly.Msg.ARD_TONE_TIP);
     this.setHelpUrl('https://www.arduino.cc/en/Reference/tone');
@@ -55,8 +55,8 @@ Blockly.Blocks['io_notone'] = {
         .appendField(Blockly.Msg.ARD_NOTONE)
         .appendField(new Blockly.FieldDropdown(
             Blockly.Arduino.Boards.selected.digitalPins), "TONEPIN");
-    this.setPreviousStatement(true);
-    this.setNextStatement(true);
+    this.setPreviousStatement(true, 'ARD_BLOCK');
+    this.setNextStatement(true,'ARD_BLOCK');
     this.setColour(Blockly.Blocks.tone.HUE);
     this.setTooltip(Blockly.Msg.ARD_NOTONE_TIP);
     this.setHelpUrl('https://www.arduino.cc/en/Reference/noTone');

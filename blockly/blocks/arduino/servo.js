@@ -40,8 +40,8 @@ Blockly.Blocks['servo_write'] = {
     this.appendDummyInput()
         .appendField(Blockly.Msg.ARD_SERVO_WRITE_DEG_180);
     this.setInputsInline(true);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
+    this.setPreviousStatement(true, 'ARD_BLOCK');
+    this.setNextStatement(true, 'ARD_BLOCK');
     this.setTooltip(Blockly.Msg.ARD_SERVO_WRITE_TIP);
   },
   /**
