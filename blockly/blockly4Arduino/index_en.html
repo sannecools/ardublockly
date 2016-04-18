@@ -31,6 +31,9 @@
   <script src="../blocks/arduino/time.js"></script>
   <script src="../blocks/arduino/tone.js"></script>
   <script src="../blocks/arduino/variables.js"></script>
+  <script src="../blocks/arduino/md_core.js"></script>
+  <script src="../blocks/arduino/md_actuator.js"></script>
+  <script src="../blocks/arduino/md_audio.js"></script>
   <script src="../generators/arduino.js"></script>
   <script src="../generators/arduino/boards.js"></script>
   <script src="../generators/arduino/declare.js"></script>
@@ -49,7 +52,10 @@
   <script src="../generators/arduino/text.js"></script>
   <script src="../generators/arduino/time.js"></script>
   <script src="../generators/arduino/tone.js"></script>
-  <script src="../generators/arduino/variables.js"></script-->
+  <script src="../generators/arduino/variables.js"></script>
+  <script src="../generators/arduino/md_core.js"></script>
+  <script src="../generators/arduino/md_actuator.js"></script>
+  <script src="../generators/arduino/md_audio.js"></script-->
   
   <!-- Language of the interface -->
   <script type="text/javascript" src="../msg/js/en.js"></script>
@@ -407,11 +413,31 @@ CoreUSB</a></li>
   <sep></sep>
   <category id="catExp" name="Expansions">
     <category id="catMD" name="MicroDuino">
+      <category id="catMDCore" name="MDCore">
+        <block type="md_functions_ext"></block>
+        <block type="mcookie_coreusb"></block>
+        <block type="mcookie_hub"></block>
+        <block type="mcookie_power"></block>
+        <block type="mcookie_audio_setup">
+          <value name="VOLUME">
+            <block type="math_number">
+              <field name="NUM">25</field>
+            </block>
+          </value>
+        </block>
+        <block type="mcookie_audio_amplifier"></block>
+      </category>
+      <category id="catMDAudio" name="MDAudio">
+        <block type="mcookie_audio_play"></block>
+        <block type="mcookie_audio_pause"></block>      
+      </category>
+      <category id="catMDAct" name="MDAct">
+        <block type="mcookie_servo_setup"></block>      
+      </category>
     </category>
-    <category id="catMD" name="AllBot">
+    <category id="catAllBot" name="AllBot">
     </category>
   </category>
-  
 </xml>;
   
 </body>
