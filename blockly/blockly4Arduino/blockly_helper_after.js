@@ -6,7 +6,6 @@
  * Change the board 
  */
 function setBoard(name) {
-  console.log('setboard', name);
   Blockly.Arduino.Boards.changeBoard(Blockly.mainWorkspace, name);
 }
 
