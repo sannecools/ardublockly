@@ -229,15 +229,15 @@ Blockly.Blocks['mcookie_audio_setup'] = {
 
     // Iterate through top level blocks to find Amplifier module
     var blocks = Blockly.mainWorkspace.getAllBlocks();
-    var audioInstancePresent = false;
+    var amplifierInstancePresent = false;
     var BMInstancePresent = false;
     var CoreInstancePresent = false;
     for (var x = 0; x < blocks.length; x++) {
       var func = blocks[x].getMDBlockName;
       if (func) {
         var BlockInstanceName = func.call(blocks[x]);
-        if (BlockInstanceName == 'mcookie_audio_setup') {
-          audioInstancePresent = true;
+        if (BlockInstanceName == 'mcookie_audio_amplifier') {
+          amplifierInstancePresent = true;
         }
         else if (BlockInstanceName == 'mcookie_power') {
           BMInstancePresent = true;
@@ -250,10 +250,10 @@ Blockly.Blocks['mcookie_audio_setup'] = {
 
     if (!CoreInstancePresent) {
       this.setWarningText('Een Brein (CoreUSB) module moet toegevoegd worden aan je blokken', 'mcookie_audio_setup');
-    } else if (!audioInstancePresent) {
-      this.setWarningText('Een Audio module moet toegevoegd worden aan je blokken om met de luidspreker te werken', 'mcookie_audio_setup');
     } else if (!BMInstancePresent) {
       this.setWarningText('Een AAA Batterij module moet toegevoegd worden aan je blokken als je met geluid werkt', 'mcookie_audio_setup');
+    } else if (!amplifierInstancePresent) {
+      this.setWarningText('Een Luidspreker module (Amplifier) moet toegevoegd worden aan je blokken', 'mcookie_audio_setup');
     } else {
       this.setWarningText(null, 'mcookie_audio_setup');
     }
@@ -291,15 +291,15 @@ Blockly.Blocks['mcookie_audio_amplifier'] = {
 
     // Iterate through top level blocks to find Amplifier module
     var blocks = Blockly.mainWorkspace.getAllBlocks();
-    var amplifierInstancePresent = false;
+    var audioInstancePresent = false;
     var BMInstancePresent = false;
     var CoreInstancePresent = false;
     for (var x = 0; x < blocks.length; x++) {
       var func = blocks[x].getMDBlockName;
       if (func) {
         var BlockInstanceName = func.call(blocks[x]);
-        if (BlockInstanceName == 'mcookie_audio_amplifier') {
-          amplifierInstancePresent = true;
+        if (BlockInstanceName == 'mcookie_audio_setup') {
+          audioInstancePresent = true;
         }
         else if (BlockInstanceName == 'mcookie_power') {
           BMInstancePresent = true;
@@ -312,8 +312,8 @@ Blockly.Blocks['mcookie_audio_amplifier'] = {
 
     if (!CoreInstancePresent) {
       this.setWarningText('Een Brein (CoreUSB) module moet toegevoegd worden aan je blokken', 'mcookie_audio_setup');
-    } else if (!amplifierInstancePresent) {
-      this.setWarningText('Een Luidspreker module (Amplifier) moet toegevoegd worden aan je blokken', 'mcookie_audio_setup');
+    } else if (!audioInstancePresent) {
+      this.setWarningText('Een Audio module moet toegevoegd worden aan je blokken om met de luidspreker te werken', 'mcookie_audio_setup');
     } else if (!BMInstancePresent) {
       this.setWarningText('Een AAA Batterij module moet toegevoegd worden aan je blokken als je met geluid werkt', 'mcookie_audio_setup');
     } else {
