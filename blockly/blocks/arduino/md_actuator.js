@@ -29,8 +29,10 @@ Blockly.Blocks.md_actuator.servoInstances = function() {
     if (getServoSetupInstance) {
       var servoInstances = getServoSetupInstance.call(blocks[x]);
         if (servoInstances) {
-          servoList.push(servoInstances[0]);
-          servoList.push(servoInstances[1]);
+          if (servoInstances[0] != Blockly.Blocks.md_actuator.noName)
+            servoList.push(servoInstances[0]);
+          if (servoInstances[1] != Blockly.Blocks.md_actuator.noName)
+            servoList.push(servoInstances[1]);
         }
     }
   }
