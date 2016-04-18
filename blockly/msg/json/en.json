@@ -1,7 +1,7 @@
 {
 	"@metadata": {
 		"author": "Ellen Spertus <ellen.spertus@gmail.com>",
-		"lastupdated": "2016-04-13 09:26:57.490592",
+		"lastupdated": "2016-04-18 16:20:14.593947",
 		"locale": "en",
 		"messagedocumentation" : "qqq"
 	},
@@ -399,6 +399,7 @@
 	"ARD_FUN_RUN_SETUP": "Arduino run first:",
 	"ARD_FUN_RUN_LOOP": "Arduino loop forever:",
 	"ARD_FUN_RUN_TIP": "Defines the Arduino setup() and loop() functions.",
+	"ARD_FUN_RUN_DECL_TIP": "Code you want to declare up front (use this e.g. for variables you need in setup)",
 	"ARD_PIN_WARN1": "Pin %1 is needed for %2 as pin %3. Already used as %4.",
 	"ARD_SERIAL_SETUP": "Setup",
 	"ARD_SERIAL_SPEED": ":  speed to",
@@ -503,5 +504,19 @@
 	"UPLOAD_CLICK_2": "  1. click on the Arduino tab",
 	"UPLOAD_CLICK_3": "  2. select all the code, and copy (CTRL+A and CTRL+C)",
 	"UPLOAD_CLICK_4": "  3. In the Arduino IDE or in a http://codebender.cc sketch, paste the code (CTRL+V)",
-	"UPLOAD_CLICK_5": "  4. Upload to your connected Arduino"
+	"UPLOAD_CLICK_5": "  4. Upload to your connected Arduino",
+	"ARD_MD_NOSERVO": "Geen Servo gekoppeld",
+	"ARD_MD_180SERVO": "0~180 graden Servo",
+	"ARD_MD_360SERVO": "0~360 graden Servo",
+	"ARD_MD_SERVOTYPE_TIP": "Selecteer het type Servo die je koppelt aan de Servo connnector",
+	"ARD_MD_SERVOCON": "Servo Motor Connector.",
+	"ARD_MD_SERVOCON_TOP": "Defineer boven:",
+	"ARD_MD_SERVOCON_BOTTOM": "Defineer onder:",
+	"ARD_MD_SERVOCON_TYPE": "Type:",
+	"ARD_MD_SERVOCON_TIP": "Servo Motor Connector, kan twee servo sturen (boven en onder). Een servo dien je een naam te geven, en het type op te geven (geen servo, 180 graden servo of 360 graden servo)",
+	"ARD_MD_SERVO_STEP_WARN1": "A Servo configuration block must be added to the hub to use this block!",
+	"ARD_MD_SERVO_STEP_WARN2": "A Name input must be added to the Servo configuration block!",
+	"ARD_MD_SERVO_STEP_WARN3": "Selected servo does not exist any more, please select a new one.",
+	"ARD_MD_SERVO_WRITE": "set 180 degree Servo ",
+	"ARD_MD_SERVO_READ": "read Servo "
 }
