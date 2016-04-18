@@ -85,6 +85,22 @@ Blockly.Arduino['mcookie_servo_write'] = function(block) {
 };
 
 /**
+ * Code generator to set a spped value to a servo PWM pin.
+ * @param {!Blockly.Block} block Block to generate the code from.
+ * @return {string} Completed code.
+ */
+Blockly.Arduino['mcookie_servo_write2'] = function(block) {
+  var servoInstanceName = block.getFieldValue('SERVO_NAME');
+  var servoSpeed = Blockly.Arduino.valueToCode(
+      block, 'SERVO_SPEED', Blockly.Arduino.ORDER_ATOMIC) || '90';
+  var servoName = 'myServo' + servoInstanceName;
+
+  //convert -100 .. 100 to 0..180 
+  var code = servoName + '.write(constrain(map(' + servoSpeed + ', -100, 100, 0, 180), 0, 180));\n';
+  return code;
+};
+
+/**
  * Code generator to read an angle value from a servo PWM pin (X).
  * @param {!Blockly.Block} block Block to generate the code from.
  * @return {array} Completed code with order of operation.

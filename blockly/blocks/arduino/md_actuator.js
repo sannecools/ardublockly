@@ -300,3 +300,80 @@ Blockly.Blocks['mcookie_servo_read'] = {
     }
   }
 };
+
+
+Blockly.Blocks['mcookie_servo_write2'] = {
+  /**
+   * Block for writing an angle value into a servo PWM pin.
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.setHelpUrl('http://arduino.cc/en/Reference/ServoWrite');
+    this.setColour(Blockly.Blocks.md_actuator.HUE);
+    this.appendDummyInput()
+        .appendField('Roteer 360 graden Servo')
+        .appendField(new Blockly.Blocks.md_actuator.FieldServoInstance(),
+            'SERVO_NAME');
+    this.appendValueInput('SERVO_SPEED')
+        .setCheck(Blockly.Types.NUMBER.checkList)
+        .appendField('met snelheid');
+    this.appendDummyInput()
+        .appendField('% (-100 tot 100)');
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, 'ARD_BLOCK');
+    this.setNextStatement(true, 'ARD_BLOCK');
+    this.setTooltip('Draai een Servo aan een bepaalde snelheid');
+  },
+  /**
+   * Called whenever anything on the workspace changes.
+   * It checks the instances of servos and attaches a warning to this
+   * block if not valid data is found.
+   * @this Blockly.Block
+   */
+  onchange: function() {
+    if (!this.workspace) { return; }  // Block has been deleted.
+
+    var currentDropdown = this.getFieldValue('SERVO_NAME');
+    var instances = Blockly.Blocks.md_actuator.servoDropdownList();
+
+    // Check for configuration block presence
+    if (instances[0][0] === Blockly.Blocks.md_actuator.noInstance) {
+      // Ensure dropdown menu says there is no config block
+      if (currentDropdown !== Blockly.Blocks.md_actuator.noInstance) {
+        this.setFieldValue(Blockly.Blocks.md_actuator.noInstance, 'SERVO_NAME');
+      }
+      this.setWarningText(Blockly.Msg.ARD_SERVO_STEP_WARN1);
+    } else {
+      // Configuration blocks present, check if any selected and contains name
+      var existingConfigSelected = false;
+      for (var x = 0; x < instances.length; x++) {
+        // Check if any of the config blocks does not have a name
+        if (instances[x][0] === Blockly.Blocks.md_actuator.noName) {
+          // If selected config has no name either, set warning and exit func
+          if (currentDropdown === Blockly.Blocks.md_actuator.noName) {
+            this.setWarningText(Blockly.Msg.ARD_SERVO_STEP_WARN2);
+            return;
+          }
+        } else if (instances[x][0] === currentDropdown) {
+          existingConfigSelected = true;
+        }
+      }
+
+      // At this point select config has a name, check if it exist
+      if (existingConfigSelected) {
+        // All good, just remove any warnings and exit the function
+        this.setWarningText(null);
+      } else {
+        if ((currentDropdown === Blockly.Blocks.md_actuator.noName) ||
+            (currentDropdown === Blockly.Blocks.md_actuator.noInstance)) {
+          // Just pick the first config block
+          this.setFieldValue(instances[0][0], 'SERVO_NAME');
+          this.setWarningText(null);
+        } else {
+          // Al this point just set a warning to select a valid servo config
+          this.setWarningText(Blockly.Msg.ARD_SERVO_STEP_WARN3);
+        }
+      }
+    }
+  }
+};

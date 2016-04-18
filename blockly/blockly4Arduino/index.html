@@ -117,6 +117,7 @@
                     <li><a href="index.html?url=examples/LedUpKidz_04_combineren.xml">04: Meerdere effecten</a></li>
                     <li class="dropdown-header">Microduino</li>
                     <li><a href="index.html?url=examples/MD_SweepServo.xml">01: Sweep Servo</a></li>
+                    <li><a href="index.html?url=examples/MD_RotateServo.xml">02: Rotate Servo</a></li>
                   </ul>
                 <button type="button" class="btn btn-default btn-md" onclick="uploadClick()">
                   <a class="b4ard_tt" title="" data-placement="top" data-toggle="tooltip" href="#" data-original-title="Opladen">
@@ -447,6 +448,13 @@
           <value name="SERVO_ANGLE">
             <block type="math_number">
               <field name="NUM">90</field>
+            </block>
+          </value>
+        </block>
+        <block type="mcookie_servo_write2">
+          <value name="SERVO_SPEED">
+            <block type="math_number">
+              <field name="NUM">50</field>
             </block>
           </value>
         </block>
