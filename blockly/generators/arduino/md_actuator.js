@@ -9,7 +9,7 @@
  */
 'use strict';
 
-goog.provide('Blockly.Arduino.md_audio');
+goog.provide('Blockly.Arduino.md_actuator');
 
 goog.require('Blockly.Arduino');
 
