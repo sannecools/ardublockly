@@ -18,11 +18,10 @@ goog.require('Blockly.Blocks');
 /** Common HSV hue for all blocks in this category. */
 Blockly.Blocks.md_core.HUE = 290;
 
-Blockly.Blocks['md_functions_ext'] = {
+Blockly.Blocks['md_modules'] = {
   /**
-   * Extended Block for defining the Microduino setup() and loop() functions, 
-   * containing also a declare upfront part for declaration before setup.
-   * and listing of the mcookies used
+   * Extended Block for defining the Microduino specific blocks, 
+   * listing the mcookies used
    * @this Blockly.Block
    */
   init: function() {
@@ -30,29 +29,19 @@ Blockly.Blocks['md_functions_ext'] = {
         .appendField("Microduino blokken: ");
     this.appendStatementInput("MD_BLOCKS")
         .setCheck('MD_BLOCK');
-    this.appendDummyInput()
-        .appendField(Blockly.Msg.ARD_FUN_RUN_DECL);
-    this.appendStatementInput('DECLARE_FUNC')
-        .setCheck('SET_VAR');
-    this.appendDummyInput()
-        .appendField(Blockly.Msg.ARD_FUN_RUN_SETUP);
-    this.appendStatementInput('SETUP_FUNC')
-        .setCheck('ARD_BLOCK');
-    this.appendDummyInput()
-        .appendField(Blockly.Msg.ARD_FUN_RUN_LOOP);
-    this.appendStatementInput('LOOP_FUNC')
-        .setCheck('ARD_BLOCK');
     this.setInputsInline(false);
     this.setColour(Blockly.Blocks.md_core.HUE);
     this.setTooltip(Blockly.Msg.ARD_FUN_RUN_TIP);
     this.setHelpUrl('https://arduino.cc/en/Reference/Loop');
     this.contextMenu = false;
   },
-  /** @return {!boolean} True if the block instance is in the workspace. 
-   * Only one allowed
+  /**
+   * Returns the MD block name.
+   * @return {!string} MD block name.
+   * @this Blockly.Block
    */
-  getArduinoLoopsInstance: function() {
-    return true;
+  getMDBlockName: function() {
+    return 'md_modules';
   },
   /**
    * Called whenever anything on the workspace changes.
@@ -63,17 +52,35 @@ Blockly.Blocks['md_functions_ext'] = {
   onchange: function() {
     if (!this.workspace) { return; }  // Block has been deleted.
 
+    // Iterate through top level blocks to find Amplifier module
+    var blocks = Blockly.mainWorkspace.getTopBlocks();
+    var blockInstancePresent = false;
+    var blockInstanceTwicePresent = false;
+    for (var x = 0; x < blocks.length; x++) {
+      var func = blocks[x].getMDBlockName;
+      if (func) {
+        var BlockInstanceName = func.call(blocks[x]);
+        if (blockInstancePresent && BlockInstanceName == 'md_modules') {
+          blockInstanceTwicePresent = true;
+        } else if (BlockInstanceName == 'md_modules') {
+          blockInstancePresent = true;
+        }
+      }
+    }
+    
     // Get the Board instance from this block
     var board = Blockly.Arduino.Boards.selected;
 
-    if (board['name'] == 'Microduino CoreUSB 32U4' || 
-        board['name'] == 'MCookie-CoreUSB') {
-      this.setWarningText(null, 'md_board');
-    } else {
+    if (!(board['name'] == 'Microduino CoreUSB 32U4' || 
+        board['name'] == 'MCookie-CoreUSB')) {
       //this.setWarningText('You need to select board MD-CoreUSB to use MD components', 'md_board');
-      this.setWarningText('Je moet chip MD-CoreUSB kiezen in de settings om Microduino componenten te gebruiken.', 'md_board');
+      this.setWarningText('Je moet chip MD-CoreUSB kiezen in de settings om Microduino componenten te gebruiken.', 'md_modules');
+    } else if (blockInstanceTwicePresent) {
+      this.setWarningText('Je hebt twee keer dit blok staan. Dat is 1 keer teveel!', 'md_modules');
+    } else {
+      this.setWarningText(null, 'md_modules');
     }
-  }
+  },
 };
 
 // The core block
@@ -121,15 +128,15 @@ Blockly.Blocks['mcookie_hub'] = {
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField("4- 2/ 3");
     this.appendValueInput("HUB05-4/5")
-        .setCheck("MD_SENSOR")
+        .setCheck(["MD_SENSOR","MD_SERVO"])
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField("5- 4/ 5");
     this.appendValueInput("HUB06-6/7")
-        .setCheck("MD_SENSOR")
+        .setCheck(["MD_SENSOR","MD_SERVO"])
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField("6- 6/ 7");
     this.appendValueInput("HUB07-8/9")
-        .setCheck("MD_SENSOR")
+        .setCheck(["MD_SENSOR","MD_SERVO"])
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField("7- 8/ 9");
     this.appendValueInput("HUB08-10/11")

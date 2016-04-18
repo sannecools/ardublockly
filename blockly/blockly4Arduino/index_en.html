@@ -115,6 +115,8 @@
                     <li><a href="index_en.html?url=examples/LedUpKidz_02_ronddraaien_en.xml">02: Wheel Effect</a></li>
                     <li><a href="index_en.html?url=examples/LedUpKidz_03_versnellen_en.xml">03: Faster and faster</a></li>
                     <li><a href="index_en.html?url=examples/LedUpKidz_04_combineren_en.xml">04: Combining Effects</a></li>
+                    <li class="dropdown-header">Microduino</li>
+                    <li><a href="index.html?url=examples/MD_SweepServo.xml">01: Sweep Servo</a></li>
                   </ul>
                 <button type="button" class="btn btn-default btn-md" onclick="uploadClick()">
                   <a class="b4ard_tt" title="" data-placement="top" data-toggle="tooltip" href="#" data-original-title="Upload">
@@ -414,7 +416,7 @@ CoreUSB</a></li>
   <category id="catExp" name="Expansions">
     <category id="catMD" name="MicroDuino">
       <category id="catMDCore" name="MDCore">
-        <block type="md_functions_ext"></block>
+        <block type="md_modules"></block>
         <block type="mcookie_coreusb"></block>
         <block type="mcookie_hub"></block>
         <block type="mcookie_power"></block>
@@ -432,7 +434,24 @@ CoreUSB</a></li>
         <block type="mcookie_audio_pause"></block>      
       </category>
       <category id="catMDAct" name="MDAct">
-        <block type="mcookie_servo_setup"></block>      
+        <block type="mcookie_servo_setup">
+          <value name="SERVOTOPTYPE">
+            <shadow type="mcookie_servo_type"></shadow>
+          </value>
+          <value name="SERVOBOTTOMTYPE">
+            <shadow type="mcookie_servo_type"></shadow>
+          </value>
+        </block>
+        <block type="mcookie_servo_type">
+        </block>
+        <block type="mcookie_servo_write">
+          <value name="SERVO_ANGLE">
+            <block type="math_number">
+              <field name="NUM">90</field>
+            </block>
+          </value>
+        </block>
+        <block type="mcookie_servo_read"></block>
       </category>
     </category>
     <category id="catAllBot" name="AllBot">

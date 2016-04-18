@@ -500,5 +500,16 @@
 	"UPLOAD_CLICK_2": "  1. klik op de Arduino tab",
 	"UPLOAD_CLICK_3": "  2. selecteeer alle code, en copieer (CTRL+A en CTRL+C)",
 	"UPLOAD_CLICK_4": "  3. In de Arduino IDE of online via een http://codebender.cc sketch, plak je gecopieerde code (CTRL+V)",
-	"UPLOAD_CLICK_5": "  4. Laad de code op naar je geconnecteerde Arduino"
+	"UPLOAD_CLICK_5": "  4. Laad de code op naar je geconnecteerde Arduino",
+	"ARD_MD_NOSERVO": "Geen Servo gekoppeld",
+	"ARD_MD_180SERVO": "0~180 graden Servo",
+	"ARD_MD_360SERVO": "0~360 graden Servo",
+	"ARD_MD_SERVOTYPE_TIP": "Selecteer het type Servo die je koppelt aan de Servo connnector",
+	"ARD_MD_SERVOCON": "Servo Motor Connector.",
+	"ARD_MD_SERVOCON_TOP": "Defineer boven:",
+	"ARD_MD_SERVOCON_BOTTOM": "Defineer onder:",
+	"ARD_MD_SERVOCON_TYPE": "Type:",
+	"ARD_MD_SERVOCON_TIP": "Servo Motor Connector, kan twee servo sturen (boven en onder). Een servo dien je een naam te geven, en het type op te geven (geen servo, 180 graden servo of 360 graden servo)",
+	"ARD_MD_SERVO_WRITE": "positioneer 180 graden Servo ",
+	"ARD_MD_SERVO_READ": "lees Servo "
 }

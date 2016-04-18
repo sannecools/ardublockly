@@ -1264,3 +1264,18 @@ Blockly.Msg.UPLOAD_CLICK_3 = '  2. select all the code, and copy (CTRL+A and CTR
 Blockly.Msg.UPLOAD_CLICK_4 = '  3. In the Arduino IDE or in a http://codebender.cc sketch, paste the code (CTRL+V)';
 Blockly.Msg.UPLOAD_CLICK_5 = '  4. Upload to your connected Arduino';
 
+//MICRODUINO BLOCKS
+Blockly.Msg.ARD_MD_NOSERVO = 'Geen Servo gekoppeld';
+Blockly.Msg.ARD_MD_180SERVO = '0~180 graden Servo';
+Blockly.Msg.ARD_MD_360SERVO = '0~360 graden Servo';
+Blockly.Msg.ARD_MD_SERVOTYPE_TIP = 'Selecteer het type Servo die je koppelt aan de Servo connnector'
+Blockly.Msg.ARD_MD_SERVOCON = 'Servo Motor Connector.';
+Blockly.Msg.ARD_MD_SERVOCON_TOP = 'Defineer boven:';
+Blockly.Msg.ARD_MD_SERVOCON_BOTTOM = 'Defineer onder:';
+Blockly.Msg.ARD_MD_SERVOCON_TYPE = 'Type:';
+Blockly.Msg.ARD_MD_SERVOCON_TIP = 'Servo Motor Connector, kan twee servo sturen (boven en onder). Een servo dien je een naam te geven, en het type op te geven (geen servo, 180 graden servo of 360 graden servo)';
+Blockly.Msg.ARD_MD_SERVO_STEP_WARN1 = 'A Servo configuration block must be added to the hub to use this block!';
+Blockly.Msg.ARD_MD_SERVO_STEP_WARN2 = 'A Name input must be added to the Servo configuration block!';
+Blockly.Msg.ARD_MD_SERVO_STEP_WARN3 = 'Selected servo does not exist any more, please select a new one.';
+Blockly.Msg.ARD_MD_SERVO_WRITE = 'set 180 degree Servo ';
+Blockly.Msg.ARD_MD_SERVO_READ = 'read Servo ';
