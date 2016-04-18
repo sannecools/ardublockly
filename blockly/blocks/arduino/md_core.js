@@ -114,51 +114,51 @@ Blockly.Blocks['mcookie_hub'] = {
     this.appendValueInput("HUB01-IIC")
         .setCheck("MD_SENSOR")
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField("verbonden met 1-   IIC");
+        .appendField("verbonden met ingang:   IIC"); //1
     this.appendValueInput("HUB02-IIC")
         .setCheck("MD_SENSOR")
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(" 2-   IIC");
+        .appendField("IIC (2)"); //2
     this.appendValueInput("HUB03-0/1")
         .setCheck("MD_SENSOR")
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField("3- 0/ 1");
+        .appendField("0/ 1"); //3
     this.appendValueInput("HUB04-2/3")
         .setCheck("MD_SENSOR")
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField("4- 2/ 3");
+        .appendField("2/ 3"); //4
     this.appendValueInput("HUB05-4/5")
         .setCheck(["MD_SENSOR","MD_SERVO"])
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField("5- 4/ 5");
+        .appendField("4/ 5"); //5
     this.appendValueInput("HUB06-6/7")
         .setCheck(["MD_SENSOR","MD_SERVO"])
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField("6- 6/ 7");
+        .appendField("6/ 7"); //6
     this.appendValueInput("HUB07-8/9")
         .setCheck(["MD_SENSOR","MD_SERVO"])
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField("7- 8/ 9");
+        .appendField("8/ 9"); //7
     this.appendValueInput("HUB08-10/11")
         .setCheck("MD_SENSOR")
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField("8-10/11");
+        .appendField("10/11"); //8
     this.appendValueInput("HUB09-12/13")
         .setCheck("MD_SENSOR")
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField("9-12/13");
+        .appendField("12/13"); //9
     this.appendValueInput("HUB10-A6/A7")
         .setCheck("MD_SENSOR")
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField("10-A6/A7");
+        .appendField("A6/A7"); //10
     this.appendValueInput("HUB11-A2/A3")
         .setCheck("MD_SENSOR")
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField("11-A2/A3");
+        .appendField("A2/A3"); //11
     this.appendValueInput("HUB12-A0/A1")
         .setCheck("MD_SENSOR")
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField("12-A0/A1");
+        .appendField("A0/A1"); //12
     this.setPreviousStatement(true, "MD_BLOCK");
     this.setNextStatement(true, "MD_BLOCK");
     this.setColour('#47EBCF');
