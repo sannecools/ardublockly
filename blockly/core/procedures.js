@@ -172,16 +172,15 @@ Blockly.Procedures.flyoutCategory = function(workspace) {
     }
     xmlList.push(block);
   }
-  if (Blockly.Blocks['arduino_functions_ext']) {
-    // <block type="arduino_functions" gap="16"></block>
+  if (Blockly.Blocks['arduino_declareupfront']) {
     var block = goog.dom.createDom('block');
-    block.setAttribute('type', 'arduino_functions_ext');
+    block.setAttribute('type', 'arduino_declareupfront');
     block.setAttribute('gap', 16);
     // If this parent block present already in the workspace show as disabled 
     var workspaceTopBlocks = workspace.getTopBlocks();
     for (var i = 0; i < workspaceTopBlocks.length; i++) {
-      if (workspaceTopBlocks[i].getArduinoLoopsInstance &&
-          workspaceTopBlocks[i].getArduinoLoopsInstance()) {
+      if (workspaceTopBlocks[i].getArduinoDeclareUpfrontInstance &&
+          workspaceTopBlocks[i].getArduinoDeclareUpfrontInstance()) {
         block.setAttribute('disabled', true);
       }
     }

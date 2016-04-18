@@ -161,12 +161,12 @@ Blockly.Arduino['arduino_functions'] = function(block) {
 };
 
 /**
- * Code generator to add code into the setup() and loop() functions and a declare block.
- * Its use is not mandatory, but necessary to add manual code to setup() and upfront declare.
+ * Code generator to add code into the setup() function and upfront.
+ * Its use is not mandatory, but necessary to add upfront declare.
  * @param {!Blockly.Block} block Block to generate the code from.
  * @return {string} Completed code.
  */
-Blockly.Arduino['arduino_functions_ext'] = function(block) {
+Blockly.Arduino['arduino_declareupfront'] = function(block) {
   // Edited version of Blockly.Generator.prototype.statementToCode
   function statementToCodeNoTab(block, name) {
     var targetBlock = block.getInputTargetBlock(name);
@@ -184,13 +184,5 @@ Blockly.Arduino['arduino_functions_ext'] = function(block) {
     Blockly.Arduino.addSetup('userDeclareCode', declareBranch);
   }
 
-  var setupBranch = Blockly.Arduino.statementToCode(block, 'SETUP_FUNC');
-  //var setupCode = Blockly.Arduino.scrub_(block, setupBranch); No comment block
-  if (setupBranch) {
-    Blockly.Arduino.addSetup('userSetupCode', setupBranch, true);
-  }
-
-  var loopBranch = statementToCodeNoTab(block, 'LOOP_FUNC');
-  //var loopcode = Blockly.Arduino.scrub_(block, loopBranch); No comment block
-  return loopBranch;
+  return '';
 };

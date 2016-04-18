@@ -1139,6 +1139,7 @@ Blockly.Msg.ARD_FUN_RUN_DECL = 'Arduino define up front:';
 Blockly.Msg.ARD_FUN_RUN_SETUP = 'Arduino run first:';
 Blockly.Msg.ARD_FUN_RUN_LOOP = 'Arduino loop forever:';
 Blockly.Msg.ARD_FUN_RUN_TIP = 'Defines the Arduino setup() and loop() functions.';
+Blockly.Msg.ARD_FUN_RUN_DECL_TIP = 'Code you want to declare up front (use this e.g. for variables you need in setup)';
 Blockly.Msg.ARD_PIN_WARN1 = 'Pin %1 is needed for %2 as pin %3. Already used as %4.';
 Blockly.Msg.ARD_SERIAL_SETUP = 'Setup';
 Blockly.Msg.ARD_SERIAL_SPEED = ':  speed to';

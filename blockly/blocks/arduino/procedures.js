@@ -42,33 +42,18 @@ Blockly.Blocks['arduino_functions'] = {
   }
 };
 
-Blockly.Blocks['arduino_functions_ext'] = {
-  /**
-   * Extended Block for defining the Arduino setup() and loop() functions, 
-   * containing also a declare upfront part for declaration before setup.
-   * @this Blockly.Block
-   */
+Blockly.Blocks['arduino_declareupfront'] = {
   init: function() {
-    this.appendDummyInput()
-        .appendField(Blockly.Msg.ARD_FUN_RUN_DECL);
-    this.appendStatementInput('DECLARE_FUNC')
-        .setCheck('SET_VAR');
-    this.appendDummyInput()
-        .appendField(Blockly.Msg.ARD_FUN_RUN_SETUP);
-    this.appendStatementInput('SETUP_FUNC')
-        .setCheck('ARD_BLOCK');
-    this.appendDummyInput()
-        .appendField(Blockly.Msg.ARD_FUN_RUN_LOOP);
-    this.appendStatementInput('LOOP_FUNC')
-        .setCheck('ARD_BLOCK');
-    this.setInputsInline(false);
     this.setColour(Blockly.Blocks.procedures.HUE);
-    this.setTooltip(Blockly.Msg.ARD_FUN_RUN_TIP);
-    this.setHelpUrl('https://arduino.cc/en/Reference/Loop');
-    this.contextMenu = false;
+    this.appendDummyInput()
+	    .appendTitle(Blockly.Msg.ARD_FUN_RUN_DECL);
+	this.appendStatementInput('DECLARE_FUNC')
+        .appendTitle('')
+        .setCheck('SET_VAR');;
+	this.setTooltip(Blockly.Msg.ARD_FUN_RUN_DECL_TIP);
   },
   /** @return {!boolean} True if the block instance is in the workspace. */
-  getArduinoLoopsInstance: function() {
+  getArduinoDeclareUpfrontInstance: function() {
     return true;
   }
 };

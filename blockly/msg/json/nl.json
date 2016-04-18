@@ -393,6 +393,7 @@
 	"ARD_FUN_RUN_SETUP": "Arduino doe eerst:",
 	"ARD_FUN_RUN_LOOP": "Arduino herhaal voor altijd:",
 	"ARD_FUN_RUN_TIP": "Definieer de Arduino setup() en loop() functies.",
+	"ARD_FUN_RUN_DECL_TIP": "Code die je vooraf wil declareren (gebruik dit bv. voor variabelen die je nodig zult hebben in de setup).",
 	"ARD_PIN_WARN1": "Pin %1 is nodig voor %2 als pin %3. Al gebruikt als %4.",
 	"ARD_SERIAL_SETUP": "Start",
 	"ARD_SERIAL_SPEED": ":  zet snelheid op",
