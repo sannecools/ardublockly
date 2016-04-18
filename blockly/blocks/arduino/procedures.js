@@ -46,9 +46,8 @@ Blockly.Blocks['arduino_declareupfront'] = {
   init: function() {
     this.setColour(Blockly.Blocks.procedures.HUE);
     this.appendDummyInput()
-	    .appendTitle(Blockly.Msg.ARD_FUN_RUN_DECL);
+	    .appendField(Blockly.Msg.ARD_FUN_RUN_DECL);
 	this.appendStatementInput('DECLARE_FUNC')
-        .appendTitle('')
         .setCheck('SET_VAR');;
 	this.setTooltip(Blockly.Msg.ARD_FUN_RUN_DECL_TIP);
   },
