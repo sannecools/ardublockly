@@ -136,7 +136,6 @@ Blockly.Blocks['mcookie_servo_setup'] = {
       this, 'SERVOTOPTYPE', Blockly.Arduino.ORDER_ATOMIC) || 'NOSERVO';
     var bottomType = Blockly.Arduino.valueToCode(
       this, 'SERVOBOTTOMTYPE', Blockly.Arduino.ORDER_ATOMIC) || 'NOSERVO';
-    console.log('test', topType)
     var InstanceName1 = this.getFieldValue('NAMETOPSERVO');
     if (!InstanceName1 || topType == 'NOSERVO') {
       InstanceName1 = Blockly.Blocks.md_actuator.noName;
@@ -194,7 +193,7 @@ Blockly.Blocks['mcookie_servo_write'] = {
       if (currentDropdown !== Blockly.Blocks.md_actuator.noInstance) {
         this.setFieldValue(Blockly.Blocks.md_actuator.noInstance, 'SERVO_NAME');
       }
-      this.setWarningText(Blockly.Msg.ARD_SERVO_STEP_WARN1);
+      this.setWarningText(Blockly.Msg.ARD_MD_SERVO_STEP_WARN1);
     } else {
       // Configuration blocks present, check if any selected and contains name
       var existingConfigSelected = false;
@@ -203,7 +202,7 @@ Blockly.Blocks['mcookie_servo_write'] = {
         if (instances[x][0] === Blockly.Blocks.md_actuator.noName) {
           // If selected config has no name either, set warning and exit func
           if (currentDropdown === Blockly.Blocks.md_actuator.noName) {
-            this.setWarningText(Blockly.Msg.ARD_SERVO_STEP_WARN2);
+            this.setWarningText(Blockly.Msg.ARD_MD_SERVO_STEP_WARN2);
             return;
           }
         } else if (instances[x][0] === currentDropdown) {
@@ -223,7 +222,7 @@ Blockly.Blocks['mcookie_servo_write'] = {
           this.setWarningText(null);
         } else {
           // Al this point just set a warning to select a valid servo config
-          this.setWarningText(Blockly.Msg.ARD_SERVO_STEP_WARN3);
+          this.setWarningText(Blockly.Msg.ARD_MD_SERVO_STEP_WARN3);
         }
       }
     }
@@ -267,7 +266,7 @@ Blockly.Blocks['mcookie_servo_read'] = {
       if (currentDropdown !== Blockly.Blocks.md_actuator.noInstance) {
         this.setFieldValue(Blockly.Blocks.md_actuator.noInstance, 'SERVO_NAME');
       }
-      this.setWarningText(Blockly.Msg.ARD_SERVO_STEP_WARN1);
+      this.setWarningText(Blockly.Msg.ARD_MD_SERVO_STEP_WARN1);
     } else {
       // Configuration blocks present, check if any selected and contains name
       var existingConfigSelected = false;
@@ -276,7 +275,7 @@ Blockly.Blocks['mcookie_servo_read'] = {
         if (instances[x][0] === Blockly.Blocks.md_actuator.noName) {
           // If selected config has no name either, set warning and exit func
           if (currentDropdown === Blockly.Blocks.md_actuator.noName) {
-            this.setWarningText(Blockly.Msg.ARD_SERVO_STEP_WARN2);
+            this.setWarningText(Blockly.Msg.ARD_MD_SERVO_STEP_WARN2);
             return;
           }
         } else if (instances[x][0] === currentDropdown) {
@@ -296,7 +295,7 @@ Blockly.Blocks['mcookie_servo_read'] = {
           this.setWarningText(null);
         } else {
           // Al this point just set a warning to select a valid servo config
-          this.setWarningText(Blockly.Msg.ARD_SERVO_STEP_WARN3);
+          this.setWarningText(Blockly.Msg.ARD_MD_SERVO_STEP_WARN3);
         }
       }
     }
@@ -344,7 +343,7 @@ Blockly.Blocks['mcookie_servo_write2'] = {
       if (currentDropdown !== Blockly.Blocks.md_actuator.noInstance) {
         this.setFieldValue(Blockly.Blocks.md_actuator.noInstance, 'SERVO_NAME');
       }
-      this.setWarningText(Blockly.Msg.ARD_SERVO_STEP_WARN1);
+      this.setWarningText(Blockly.Msg.ARD_MD_SERVO_STEP_WARN1);
     } else {
       // Configuration blocks present, check if any selected and contains name
       var existingConfigSelected = false;
@@ -353,7 +352,7 @@ Blockly.Blocks['mcookie_servo_write2'] = {
         if (instances[x][0] === Blockly.Blocks.md_actuator.noName) {
           // If selected config has no name either, set warning and exit func
           if (currentDropdown === Blockly.Blocks.md_actuator.noName) {
-            this.setWarningText(Blockly.Msg.ARD_SERVO_STEP_WARN2);
+            this.setWarningText(Blockly.Msg.ARD_MD_SERVO_STEP_WARN2);
             return;
           }
         } else if (instances[x][0] === currentDropdown) {
@@ -373,7 +372,7 @@ Blockly.Blocks['mcookie_servo_write2'] = {
           this.setWarningText(null);
         } else {
           // Al this point just set a warning to select a valid servo config
-          this.setWarningText(Blockly.Msg.ARD_SERVO_STEP_WARN3);
+          this.setWarningText(Blockly.Msg.ARD_MD_SERVO_STEP_WARN3);
         }
       }
     }
