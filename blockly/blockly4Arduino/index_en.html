@@ -32,6 +32,7 @@
   <script src="../blocks/arduino/tone.js"></script>
   <script src="../blocks/arduino/variables.js"></script>
   <script src="../blocks/arduino/md_core.js"></script>
+  <script src="../blocks/arduino/md_control.js"></script>
   <script src="../blocks/arduino/md_actuator.js"></script>
   <script src="../blocks/arduino/md_audio.js"></script>
   <script src="../generators/arduino.js"></script>
@@ -54,6 +55,7 @@
   <script src="../generators/arduino/tone.js"></script>
   <script src="../generators/arduino/variables.js"></script>
   <script src="../generators/arduino/md_core.js"></script>
+  <script src="../generators/arduino/md_control.js"></script>
   <script src="../generators/arduino/md_actuator.js"></script>
   <script src="../generators/arduino/md_audio.js"></script-->
   
@@ -434,7 +436,7 @@ CoreUSB</a></li>
         <block type="mcookie_audio_play"></block>
         <block type="mcookie_audio_pause"></block>      
       </category>
-      <category id="catMDAct" name="MDAct">
+      <category id="catMDAct" name="MDMovement">
         <block type="mcookie_servo_setup">
           <value name="SERVOTOPTYPE">
             <shadow type="mcookie_servo_type"></shadow>
@@ -460,6 +462,11 @@ CoreUSB</a></li>
           </value>
         </block>
         <block type="mcookie_servo_read"></block>
+      </category>
+      <category id="catMDControl" name="MDButtons">
+        <block type="mcookie_button_setup"></block>
+        <block type="mcookie_button_digitalread"></block>
+        <block type="mcookie_button_input"></block>
       </category>
     </category>
     <category id="catAllBot" name="AllBot">

@@ -21,16 +21,6 @@ goog.require('Blockly.Arduino');
  * @return {string} Completed code.
  */
 Blockly.Arduino['md_modules'] = function(block) {
-  // Edited version of Blockly.Generator.prototype.statementToCode
-  function statementToCodeNoTab(block, name) {
-    var targetBlock = block.getInputTargetBlock(name);
-    var code = Blockly.Arduino.blockToCode(targetBlock);
-    if (!goog.isString(code)) {
-      throw 'Expecting code from statement block "' + targetBlock.type + '".';
-    }
-    return code;
-  }
-  
   var MDblocksBranch = Blockly.Arduino.statementToCode(block, 'MD_BLOCKS');
   if (MDblocksBranch) {
     // blocks should only init data ... 
